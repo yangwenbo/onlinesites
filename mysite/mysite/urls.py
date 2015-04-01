@@ -7,10 +7,10 @@ urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'mysite.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
-
+    #url("",static),
     url(r'^admin/', include(admin.site.urls)),
     url('^hello$',hello),
-    url('^staticanalysis$', static),
+    url('^s_analysis$', static),
     url('^uploadapk$', uploadapk),
     url('^result$', result),
     url('^dynamicanalysis$', dynamic),
