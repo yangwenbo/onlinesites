@@ -1,0 +1,851 @@
+instUid 5||Ljava/util/ArrayList;||<init>||V
+instUid 7||Landroid/content/ContextWrapper;||getContentResolver||L
+instUid 10||Landroid/net/Uri;||parse||LL
+instUid 10||Landroid/net/Uri;||parse||LL
+p[1]: instUid 10 #Ljava/lang/String; 0x420c93c0
+content://sms/﻿
+instUid 32||Landroid/content/ContentResolver;||query||LLLLLL
+instUid 32||Landroid/content/ContentResolver;||query||LLLLLL
+p[1]: instUid 32 #Landroid/net/Uri$StringUri; 0x420c9468
+--authority #Landroid/net/Uri$Part; 0x57b1e948
+--uriString #Ljava/lang/String; 0x57b1e95c
+content://sms/﻿
+--ssp #Landroid/net/Uri$Part; 0x57b1e970
+--fragment #Landroid/net/Uri$Part; 0x57b1e984
+--path #Landroid/net/Uri$PathPart; 0x57b1e998
+--query #Landroid/net/Uri$Part; 0x57b1e9ac
+--scheme #Ljava/lang/String; 0x57b1e9c0
+NOT CACHED﻿
+--cachedSsi #I 0x57b1e9d4
+-2
+--cachedFsi #I 0x57b1e9e8
+-2
+p[2]: instUid 32 #[Ljava/lang/String; 0x420c9500
+#[Ljava/lang/String; length:5
+instUid 32 #Ljava/lang/String; 0x4188a650
+_id﻿
+instUid 32 #Ljava/lang/String; 0x418bfca0
+address﻿
+instUid 32 #Ljava/lang/String; 0x420c95b0
+date﻿
+instUid 32 #Ljava/lang/String; 0x41857420
+type﻿
+instUid 32 #Ljava/lang/String; 0x418c04e0
+body﻿
+p[3]: 
+p[4]: 
+p[5]: instUid 32 #Ljava/lang/String; 0x420c9670
+ date desc ﻿
+instUid 34||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 38||Luchihal/demo/sms/SmsInfo;||<init>||V
+instUid 40||Landroid/database/CursorWrapper;||getString||LI
+instUid 43||Landroid/database/CursorWrapper;||getString||LI
+instUid 46||Landroid/database/CursorWrapper;||getString||LI
+instUid 49||Landroid/database/CursorWrapper;||getInt||II
+instUid 52||Landroid/database/CursorWrapper;||getString||LI
+instUid 54||Luchihal/demo/sms/SmsInfo;||setId||VL
+instUid 55||Luchihal/demo/sms/SmsInfo;||setAddress||VL
+instUid 56||Luchihal/demo/sms/SmsInfo;||setDate||VL
+instUid 57||Luchihal/demo/sms/SmsInfo;||setType||VI
+instUid 58||Luchihal/demo/sms/SmsInfo;||setBody||VL
+instUid 59||Ljava/util/ArrayList;||add||ZL
+instUid 61||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 64||Landroid/content/ContentResolver$CursorWrapperInner;||close||V
+instUid 70||Ljava/util/ArrayList;||<init>||V
+instUid 73||Landroid/content/ContextWrapper;||getContentResolver||L
+instUid 76||Landroid/net/Uri;||parse||LL
+instUid 76||Landroid/net/Uri;||parse||LL
+p[1]: instUid 76 #Ljava/lang/String; 0x420d6108
+content://com.android.contacts/raw_contacts﻿
+instUid 79||Landroid/net/Uri;||parse||LL
+instUid 79||Landroid/net/Uri;||parse||LL
+p[1]: instUid 79 #Ljava/lang/String; 0x420d61d8
+content://com.android.contacts/data﻿
+instUid 85||Landroid/content/ContentResolver;||query||LLLLLL
+instUid 85||Landroid/content/ContentResolver;||query||LLLLLL
+p[1]: instUid 85 #Landroid/net/Uri$StringUri; 0x420d6198
+--authority #Landroid/net/Uri$Part; 0x57b1e948
+--uriString #Ljava/lang/String; 0x57b1e95c
+content://com.android.contacts/raw_contacts﻿
+--ssp #Landroid/net/Uri$Part; 0x57b1e970
+--fragment #Landroid/net/Uri$Part; 0x57b1e984
+--path #Landroid/net/Uri$PathPart; 0x57b1e998
+--query #Landroid/net/Uri$Part; 0x57b1e9ac
+--scheme #Ljava/lang/String; 0x57b1e9c0
+NOT CACHED﻿
+--cachedSsi #I 0x57b1e9d4
+-2
+--cachedFsi #I 0x57b1e9e8
+-2
+p[2]: 
+p[3]: 
+p[4]: 
+p[5]: 
+instUid 87||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 91||Luchihal/demo/contact/ContactInfo;||<init>||V
+instUid 93||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 95||Landroid/database/CursorWrapper;||getString||LI
+instUid 97||Luchihal/demo/contact/ContactInfo;||setId||VL
+instUid 99||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 101||Landroid/database/CursorWrapper;||getString||LI
+instUid 104||Luchihal/demo/contact/ContactInfo;||setName||VL
+instUid 114||Landroid/content/ContentResolver;||query||LLLLLL
+instUid 114||Landroid/content/ContentResolver;||query||LLLLLL
+p[1]: instUid 114 #Landroid/net/Uri$StringUri; 0x420d6258
+--authority #Landroid/net/Uri$Part; 0x57b1e948
+--uriString #Ljava/lang/String; 0x57b1e95c
+content://com.android.contacts/data﻿
+--ssp #Landroid/net/Uri$Part; 0x57b1e970
+--fragment #Landroid/net/Uri$Part; 0x57b1e984
+--path #Landroid/net/Uri$PathPart; 0x57b1e998
+--query #Landroid/net/Uri$Part; 0x57b1e9ac
+--scheme #Ljava/lang/String; 0x57b1e9c0
+NOT CACHED﻿
+--cachedSsi #I 0x57b1e9d4
+-2
+--cachedFsi #I 0x57b1e9e8
+-2
+p[2]: 
+p[3]: instUid 114 #Ljava/lang/String; 0x420d8448
+raw_contact_id = ? ﻿
+p[4]: instUid 114 #[Ljava/lang/String; 0x420d84a8
+#[Ljava/lang/String; length:1
+instUid 114 #Ljava/lang/String; 0x420d8378
+1﻿
+p[5]: 
+instUid 116||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 119||Landroid/content/ContentResolver$CursorWrapperInner;||close||V
+instUid 120||Ljava/util/ArrayList;||add||ZL
+instUid 122||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 126||Luchihal/demo/contact/ContactInfo;||<init>||V
+instUid 128||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 130||Landroid/database/CursorWrapper;||getString||LI
+instUid 132||Luchihal/demo/contact/ContactInfo;||setId||VL
+instUid 134||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 136||Landroid/database/CursorWrapper;||getString||LI
+instUid 139||Luchihal/demo/contact/ContactInfo;||setName||VL
+instUid 149||Landroid/content/ContentResolver;||query||LLLLLL
+instUid 149||Landroid/content/ContentResolver;||query||LLLLLL
+p[1]: instUid 149 #Landroid/net/Uri$StringUri; 0x420d6258
+--authority #Landroid/net/Uri$Part; 0x57b1e948
+--uriString #Ljava/lang/String; 0x57b1e95c
+content://com.android.contacts/data﻿
+--ssp #Landroid/net/Uri$Part; 0x57b1e970
+--fragment #Landroid/net/Uri$Part; 0x57b1e984
+--path #Landroid/net/Uri$PathPart; 0x57b1e998
+--query #Landroid/net/Uri$Part; 0x57b1e9ac
+--scheme #Ljava/lang/String; 0x57b1e9c0
+content﻿
+--cachedSsi #I 0x57b1e9d4
+7
+--cachedFsi #I 0x57b1e9e8
+-2
+p[2]: 
+p[3]: instUid 149 #Ljava/lang/String; 0x420d8448
+raw_contact_id = ? ﻿
+p[4]: instUid 149 #[Ljava/lang/String; 0x420da320
+#[Ljava/lang/String; length:1
+instUid 149 #Ljava/lang/String; 0x420da2a8
+3﻿
+p[5]: 
+instUid 151||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 155||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 157||Landroid/database/CursorWrapper;||getString||LI
+instUid 169||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 173||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 175||Landroid/database/CursorWrapper;||getString||LI
+instUid 183||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 185||Landroid/database/CursorWrapper;||getString||LI
+instUid 188||Luchihal/demo/contact/ContactInfo;||setPhone||VL
+instUid 194||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 198||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 200||Landroid/database/CursorWrapper;||getString||LI
+instUid 208||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 210||Landroid/database/CursorWrapper;||getString||LI
+instUid 213||Luchihal/demo/contact/ContactInfo;||setPhone||VL
+instUid 219||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 223||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 225||Landroid/database/CursorWrapper;||getString||LI
+instUid 233||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 235||Landroid/database/CursorWrapper;||getString||LI
+instUid 238||Luchihal/demo/contact/ContactInfo;||setPhone||VL
+instUid 244||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 248||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 250||Landroid/database/CursorWrapper;||getString||LI
+instUid 258||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 260||Landroid/database/CursorWrapper;||getString||LI
+instUid 263||Luchihal/demo/contact/ContactInfo;||setPhone||VL
+instUid 269||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 273||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 275||Landroid/database/CursorWrapper;||getString||LI
+instUid 283||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 285||Landroid/database/CursorWrapper;||getString||LI
+instUid 288||Luchihal/demo/contact/ContactInfo;||setPhone||VL
+instUid 294||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 298||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 300||Landroid/database/CursorWrapper;||getString||LI
+instUid 313||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 315||Landroid/database/CursorWrapper;||getString||LI
+instUid 317||Luchihal/demo/contact/ContactInfo;||setEmail||VL
+instUid 319||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 323||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 325||Landroid/database/CursorWrapper;||getString||LI
+instUid 338||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 340||Landroid/database/CursorWrapper;||getString||LI
+instUid 342||Luchihal/demo/contact/ContactInfo;||setEmail||VL
+instUid 344||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 348||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 350||Landroid/database/CursorWrapper;||getString||LI
+instUid 363||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 365||Landroid/database/CursorWrapper;||getString||LI
+instUid 367||Luchihal/demo/contact/ContactInfo;||setEmail||VL
+instUid 369||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 373||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 375||Landroid/database/CursorWrapper;||getString||LI
+instUid 388||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 390||Landroid/database/CursorWrapper;||getString||LI
+instUid 392||Luchihal/demo/contact/ContactInfo;||setEmail||VL
+instUid 394||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 398||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 400||Landroid/database/CursorWrapper;||getString||LI
+instUid 413||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 415||Landroid/database/CursorWrapper;||getString||LI
+instUid 417||Luchihal/demo/contact/ContactInfo;||setEmail||VL
+instUid 419||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 423||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 425||Landroid/database/CursorWrapper;||getString||LI
+instUid 437||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 441||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 443||Landroid/database/CursorWrapper;||getString||LI
+instUid 455||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 458||Landroid/content/ContentResolver$CursorWrapperInner;||close||V
+instUid 459||Ljava/util/ArrayList;||add||ZL
+instUid 461||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 465||Luchihal/demo/contact/ContactInfo;||<init>||V
+instUid 467||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 469||Landroid/database/CursorWrapper;||getString||LI
+instUid 471||Luchihal/demo/contact/ContactInfo;||setId||VL
+instUid 473||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 475||Landroid/database/CursorWrapper;||getString||LI
+instUid 478||Luchihal/demo/contact/ContactInfo;||setName||VL
+instUid 488||Landroid/content/ContentResolver;||query||LLLLLL
+instUid 488||Landroid/content/ContentResolver;||query||LLLLLL
+p[1]: instUid 488 #Landroid/net/Uri$StringUri; 0x420d6258
+--authority #Landroid/net/Uri$Part; 0x57b1e948
+--uriString #Ljava/lang/String; 0x57b1e95c
+content://com.android.contacts/data﻿
+--ssp #Landroid/net/Uri$Part; 0x57b1e970
+--fragment #Landroid/net/Uri$Part; 0x57b1e984
+--path #Landroid/net/Uri$PathPart; 0x57b1e998
+--query #Landroid/net/Uri$Part; 0x57b1e9ac
+--scheme #Ljava/lang/String; 0x57b1e9c0
+content﻿
+--cachedSsi #I 0x57b1e9d4
+7
+--cachedFsi #I 0x57b1e9e8
+-2
+p[2]: 
+p[3]: instUid 488 #Ljava/lang/String; 0x420d8448
+raw_contact_id = ? ﻿
+p[4]: instUid 488 #[Ljava/lang/String; 0x420da338
+#[Ljava/lang/String; length:1
+instUid 488 #Ljava/lang/String; 0x420c3098
+4﻿
+p[5]: 
+instUid 490||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 494||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 496||Landroid/database/CursorWrapper;||getString||LI
+instUid 508||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 512||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 514||Landroid/database/CursorWrapper;||getString||LI
+instUid 522||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 524||Landroid/database/CursorWrapper;||getString||LI
+instUid 527||Luchihal/demo/contact/ContactInfo;||setPhone||VL
+instUid 533||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 537||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 539||Landroid/database/CursorWrapper;||getString||LI
+instUid 547||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 549||Landroid/database/CursorWrapper;||getString||LI
+instUid 552||Luchihal/demo/contact/ContactInfo;||setPhone||VL
+instUid 558||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 562||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 564||Landroid/database/CursorWrapper;||getString||LI
+instUid 572||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 574||Landroid/database/CursorWrapper;||getString||LI
+instUid 577||Luchihal/demo/contact/ContactInfo;||setPhone||VL
+instUid 583||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 587||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 589||Landroid/database/CursorWrapper;||getString||LI
+instUid 597||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 599||Landroid/database/CursorWrapper;||getString||LI
+instUid 602||Luchihal/demo/contact/ContactInfo;||setPhone||VL
+instUid 608||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 612||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 614||Landroid/database/CursorWrapper;||getString||LI
+instUid 622||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 624||Landroid/database/CursorWrapper;||getString||LI
+instUid 627||Luchihal/demo/contact/ContactInfo;||setPhone||VL
+instUid 633||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 637||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 639||Landroid/database/CursorWrapper;||getString||LI
+instUid 651||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 654||Landroid/content/ContentResolver$CursorWrapperInner;||close||V
+instUid 655||Ljava/util/ArrayList;||add||ZL
+instUid 657||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 661||Luchihal/demo/contact/ContactInfo;||<init>||V
+instUid 663||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 665||Landroid/database/CursorWrapper;||getString||LI
+instUid 667||Luchihal/demo/contact/ContactInfo;||setId||VL
+instUid 669||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 671||Landroid/database/CursorWrapper;||getString||LI
+instUid 674||Luchihal/demo/contact/ContactInfo;||setName||VL
+instUid 684||Landroid/content/ContentResolver;||query||LLLLLL
+instUid 684||Landroid/content/ContentResolver;||query||LLLLLL
+p[1]: instUid 684 #Landroid/net/Uri$StringUri; 0x420d6258
+--authority #Landroid/net/Uri$Part; 0x57b1e948
+--uriString #Ljava/lang/String; 0x57b1e95c
+content://com.android.contacts/data﻿
+--ssp #Landroid/net/Uri$Part; 0x57b1e970
+--fragment #Landroid/net/Uri$Part; 0x57b1e984
+--path #Landroid/net/Uri$PathPart; 0x57b1e998
+--query #Landroid/net/Uri$Part; 0x57b1e9ac
+--scheme #Ljava/lang/String; 0x57b1e9c0
+content﻿
+--cachedSsi #I 0x57b1e9d4
+7
+--cachedFsi #I 0x57b1e9e8
+-2
+p[2]: 
+p[3]: instUid 684 #Ljava/lang/String; 0x420d8448
+raw_contact_id = ? ﻿
+p[4]: instUid 684 #[Ljava/lang/String; 0x420dc100
+#[Ljava/lang/String; length:1
+instUid 684 #Ljava/lang/String; 0x420b2df8
+5﻿
+p[5]: 
+instUid 686||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 690||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 692||Landroid/database/CursorWrapper;||getString||LI
+instUid 704||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 708||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 710||Landroid/database/CursorWrapper;||getString||LI
+instUid 718||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 720||Landroid/database/CursorWrapper;||getString||LI
+instUid 723||Luchihal/demo/contact/ContactInfo;||setPhone||VL
+instUid 729||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 733||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 735||Landroid/database/CursorWrapper;||getString||LI
+instUid 747||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 750||Landroid/content/ContentResolver$CursorWrapperInner;||close||V
+instUid 751||Ljava/util/ArrayList;||add||ZL
+instUid 753||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 757||Luchihal/demo/contact/ContactInfo;||<init>||V
+instUid 759||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 761||Landroid/database/CursorWrapper;||getString||LI
+instUid 763||Luchihal/demo/contact/ContactInfo;||setId||VL
+instUid 765||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 767||Landroid/database/CursorWrapper;||getString||LI
+instUid 770||Luchihal/demo/contact/ContactInfo;||setName||VL
+instUid 780||Landroid/content/ContentResolver;||query||LLLLLL
+instUid 780||Landroid/content/ContentResolver;||query||LLLLLL
+p[1]: instUid 780 #Landroid/net/Uri$StringUri; 0x420d6258
+--authority #Landroid/net/Uri$Part; 0x57b1e948
+--uriString #Ljava/lang/String; 0x57b1e95c
+content://com.android.contacts/data﻿
+--ssp #Landroid/net/Uri$Part; 0x57b1e970
+--fragment #Landroid/net/Uri$Part; 0x57b1e984
+--path #Landroid/net/Uri$PathPart; 0x57b1e998
+--query #Landroid/net/Uri$Part; 0x57b1e9ac
+--scheme #Ljava/lang/String; 0x57b1e9c0
+content﻿
+--cachedSsi #I 0x57b1e9d4
+7
+--cachedFsi #I 0x57b1e9e8
+-2
+p[2]: 
+p[3]: instUid 780 #Ljava/lang/String; 0x420d8448
+raw_contact_id = ? ﻿
+p[4]: instUid 780 #[Ljava/lang/String; 0x420883c0
+#[Ljava/lang/String; length:1
+instUid 780 #Ljava/lang/String; 0x4208a7a0
+6﻿
+p[5]: 
+instUid 782||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 786||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 788||Landroid/database/CursorWrapper;||getString||LI
+instUid 800||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 804||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 806||Landroid/database/CursorWrapper;||getString||LI
+instUid 814||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 816||Landroid/database/CursorWrapper;||getString||LI
+instUid 819||Luchihal/demo/contact/ContactInfo;||setPhone||VL
+instUid 825||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 829||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 831||Landroid/database/CursorWrapper;||getString||LI
+instUid 843||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 846||Landroid/content/ContentResolver$CursorWrapperInner;||close||V
+instUid 847||Ljava/util/ArrayList;||add||ZL
+instUid 849||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 853||Luchihal/demo/contact/ContactInfo;||<init>||V
+instUid 855||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 857||Landroid/database/CursorWrapper;||getString||LI
+instUid 859||Luchihal/demo/contact/ContactInfo;||setId||VL
+instUid 861||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 863||Landroid/database/CursorWrapper;||getString||LI
+instUid 866||Luchihal/demo/contact/ContactInfo;||setName||VL
+instUid 876||Landroid/content/ContentResolver;||query||LLLLLL
+instUid 876||Landroid/content/ContentResolver;||query||LLLLLL
+p[1]: instUid 876 #Landroid/net/Uri$StringUri; 0x420d6258
+--authority #Landroid/net/Uri$Part; 0x57b1e948
+--uriString #Ljava/lang/String; 0x57b1e95c
+content://com.android.contacts/data﻿
+--ssp #Landroid/net/Uri$Part; 0x57b1e970
+--fragment #Landroid/net/Uri$Part; 0x57b1e984
+--path #Landroid/net/Uri$PathPart; 0x57b1e998
+--query #Landroid/net/Uri$Part; 0x57b1e9ac
+--scheme #Ljava/lang/String; 0x57b1e9c0
+content﻿
+--cachedSsi #I 0x57b1e9d4
+7
+--cachedFsi #I 0x57b1e9e8
+-2
+p[2]: 
+p[3]: instUid 876 #Ljava/lang/String; 0x420d8448
+raw_contact_id = ? ﻿
+p[4]: instUid 876 #[Ljava/lang/String; 0x420877b0
+#[Ljava/lang/String; length:1
+instUid 876 #Ljava/lang/String; 0x420c04a8
+7﻿
+p[5]: 
+instUid 878||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 882||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 884||Landroid/database/CursorWrapper;||getString||LI
+instUid 896||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 900||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 902||Landroid/database/CursorWrapper;||getString||LI
+instUid 910||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 912||Landroid/database/CursorWrapper;||getString||LI
+instUid 915||Luchihal/demo/contact/ContactInfo;||setPhone||VL
+instUid 921||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 925||Landroid/database/CursorWrapper;||getColumnIndex||IL
+instUid 927||Landroid/database/CursorWrapper;||getString||LI
+instUid 939||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 942||Landroid/content/ContentResolver$CursorWrapperInner;||close||V
+instUid 943||Ljava/util/ArrayList;||add||ZL
+instUid 945||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 948||Landroid/content/ContentResolver$CursorWrapperInner;||close||V
+instUid 955||Ljava/io/File;||<init>||VL
+instUid 956||Ljava/io/File;||exists||Z
+instUid 960||Ljava/io/FileInputStream;||<init>||VL
+instUid 961||Landroid/util/Xml;||newPullParser||L
+instUid 964||Luchihal/demo/calendar/CalenderService;||getCalenderInfos||L
+instUid 966||Ljava/util/ArrayList;||<init>||V
+instUid 969||Landroid/content/ContextWrapper;||getContentResolver||L
+instUid 972||Landroid/net/Uri;||parse||LL
+instUid 972||Landroid/net/Uri;||parse||LL
+p[1]: instUid 972 #Ljava/lang/String; 0x420cfbc0
+content://com.android.calendar/calendars﻿
+instUid 975||Landroid/net/Uri;||parse||LL
+instUid 975||Landroid/net/Uri;||parse||LL
+p[1]: instUid 975 #Ljava/lang/String; 0x420cfc48
+content://com.android.calendar/events﻿
+instUid 978||Landroid/net/Uri;||parse||LL
+instUid 978||Landroid/net/Uri;||parse||LL
+p[1]: instUid 978 #Ljava/lang/String; 0x420d51d0
+content://com.android.calendar/reminders﻿
+instUid 984||Landroid/content/ContentResolver;||query||LLLLLL
+instUid 984||Landroid/content/ContentResolver;||query||LLLLLL
+p[1]: instUid 984 #Landroid/net/Uri$StringUri; 0x420d5190
+--authority #Landroid/net/Uri$Part; 0x57b1e948
+--uriString #Ljava/lang/String; 0x57b1e95c
+content://com.android.calendar/events﻿
+--ssp #Landroid/net/Uri$Part; 0x57b1e970
+--fragment #Landroid/net/Uri$Part; 0x57b1e984
+--path #Landroid/net/Uri$PathPart; 0x57b1e998
+--query #Landroid/net/Uri$Part; 0x57b1e9ac
+--scheme #Ljava/lang/String; 0x57b1e9c0
+NOT CACHED﻿
+--cachedSsi #I 0x57b1e9d4
+-2
+--cachedFsi #I 0x57b1e9e8
+-2
+p[2]: 
+p[3]: 
+p[4]: 
+p[5]: 
+instUid 986||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 989||Landroid/content/ContentResolver$CursorWrapperInner;||close||V
+instUid 1000||Lorg/kxml2/io/KXmlParser;||setInput||VLL
+instUid 1001||Lorg/kxml2/io/KXmlParser;||getEventType||I
+instUid 1006||Lorg/kxml2/io/KXmlParser;||next||I
+instUid 1013||Lorg/kxml2/io/KXmlParser;||getName||L
+instUid 1019||Lorg/kxml2/io/KXmlParser;||getName||L
+instUid 1025||Lorg/kxml2/io/KXmlParser;||getName||L
+instUid 1031||Lorg/kxml2/io/KXmlParser;||getName||L
+instUid 1037||Lorg/kxml2/io/KXmlParser;||getName||L
+instUid 1043||Lorg/kxml2/io/KXmlParser;||getName||L
+instUid 1049||Lorg/kxml2/io/KXmlParser;||getName||L
+instUid 1055||Lorg/kxml2/io/KXmlParser;||getName||L
+instUid 1060||Lorg/kxml2/io/KXmlParser;||next||I
+instUid 1067||Lorg/kxml2/io/KXmlParser;||getName||L
+instUid 1072||Lorg/kxml2/io/KXmlParser;||next||I
+instUid 1083||Ljava/io/File;||<init>||VL
+instUid 1084||Ljava/io/File;||exists||Z
+instUid 1088||Ljava/io/FileInputStream;||<init>||VL
+instUid 1089||Landroid/util/Xml;||newPullParser||L
+instUid 1092||Luchihal/demo/calendar/CalenderService;||getCalenderInfos||L
+instUid 1094||Ljava/util/ArrayList;||<init>||V
+instUid 1097||Landroid/content/ContextWrapper;||getContentResolver||L
+instUid 1100||Landroid/net/Uri;||parse||LL
+instUid 1100||Landroid/net/Uri;||parse||LL
+p[1]: instUid 1100 #Ljava/lang/String; 0x420cfbc0
+content://com.android.calendar/calendars﻿
+instUid 1103||Landroid/net/Uri;||parse||LL
+instUid 1103||Landroid/net/Uri;||parse||LL
+p[1]: instUid 1103 #Ljava/lang/String; 0x420cfc48
+content://com.android.calendar/events﻿
+instUid 1106||Landroid/net/Uri;||parse||LL
+instUid 1106||Landroid/net/Uri;||parse||LL
+p[1]: instUid 1106 #Ljava/lang/String; 0x420d51d0
+content://com.android.calendar/reminders﻿
+instUid 1112||Landroid/content/ContentResolver;||query||LLLLLL
+instUid 1112||Landroid/content/ContentResolver;||query||LLLLLL
+p[1]: instUid 1112 #Landroid/net/Uri$StringUri; 0x42095c60
+--authority #Landroid/net/Uri$Part; 0x57b1e948
+--uriString #Ljava/lang/String; 0x57b1e95c
+content://com.android.calendar/events﻿
+--ssp #Landroid/net/Uri$Part; 0x57b1e970
+--fragment #Landroid/net/Uri$Part; 0x57b1e984
+--path #Landroid/net/Uri$PathPart; 0x57b1e998
+--query #Landroid/net/Uri$Part; 0x57b1e9ac
+--scheme #Ljava/lang/String; 0x57b1e9c0
+NOT CACHED﻿
+--cachedSsi #I 0x57b1e9d4
+-2
+--cachedFsi #I 0x57b1e9e8
+-2
+p[2]: 
+p[3]: 
+p[4]: 
+p[5]: 
+instUid 1114||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 1117||Landroid/content/ContentResolver$CursorWrapperInner;||close||V
+instUid 1128||Lorg/kxml2/io/KXmlParser;||setInput||VLL
+instUid 1129||Lorg/kxml2/io/KXmlParser;||getEventType||I
+instUid 1134||Lorg/kxml2/io/KXmlParser;||next||I
+instUid 1141||Lorg/kxml2/io/KXmlParser;||getName||L
+instUid 1147||Lorg/kxml2/io/KXmlParser;||getName||L
+instUid 1153||Lorg/kxml2/io/KXmlParser;||getName||L
+instUid 1159||Lorg/kxml2/io/KXmlParser;||getName||L
+instUid 1165||Lorg/kxml2/io/KXmlParser;||getName||L
+instUid 1171||Lorg/kxml2/io/KXmlParser;||getName||L
+instUid 1177||Lorg/kxml2/io/KXmlParser;||getName||L
+instUid 1183||Lorg/kxml2/io/KXmlParser;||getName||L
+instUid 1188||Lorg/kxml2/io/KXmlParser;||next||I
+instUid 1195||Lorg/kxml2/io/KXmlParser;||getName||L
+instUid 1200||Lorg/kxml2/io/KXmlParser;||next||I
+instUid 1211||Ljava/io/File;||<init>||VL
+instUid 1212||Ljava/io/File;||exists||Z
+instUid 1216||Ljava/io/FileInputStream;||<init>||VL
+instUid 1217||Landroid/util/Xml;||newPullParser||L
+instUid 1220||Luchihal/demo/calendar/CalenderService;||getCalenderInfos||L
+instUid 1222||Ljava/util/ArrayList;||<init>||V
+instUid 1225||Landroid/content/ContextWrapper;||getContentResolver||L
+instUid 1228||Landroid/net/Uri;||parse||LL
+instUid 1228||Landroid/net/Uri;||parse||LL
+p[1]: instUid 1228 #Ljava/lang/String; 0x420cfbc0
+content://com.android.calendar/calendars﻿
+instUid 1231||Landroid/net/Uri;||parse||LL
+instUid 1231||Landroid/net/Uri;||parse||LL
+p[1]: instUid 1231 #Ljava/lang/String; 0x420cfc48
+content://com.android.calendar/events﻿
+instUid 1234||Landroid/net/Uri;||parse||LL
+instUid 1234||Landroid/net/Uri;||parse||LL
+p[1]: instUid 1234 #Ljava/lang/String; 0x420d51d0
+content://com.android.calendar/reminders﻿
+instUid 1240||Landroid/content/ContentResolver;||query||LLLLLL
+instUid 1240||Landroid/content/ContentResolver;||query||LLLLLL
+p[1]: instUid 1240 #Landroid/net/Uri$StringUri; 0x4207bea0
+--authority #Landroid/net/Uri$Part; 0x57b1e948
+--uriString #Ljava/lang/String; 0x57b1e95c
+content://com.android.calendar/events﻿
+--ssp #Landroid/net/Uri$Part; 0x57b1e970
+--fragment #Landroid/net/Uri$Part; 0x57b1e984
+--path #Landroid/net/Uri$PathPart; 0x57b1e998
+--query #Landroid/net/Uri$Part; 0x57b1e9ac
+--scheme #Ljava/lang/String; 0x57b1e9c0
+NOT CACHED﻿
+--cachedSsi #I 0x57b1e9d4
+-2
+--cachedFsi #I 0x57b1e9e8
+-2
+p[2]: 
+p[3]: 
+p[4]: 
+p[5]: 
+instUid 1242||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 1245||Landroid/content/ContentResolver$CursorWrapperInner;||close||V
+instUid 1256||Lorg/kxml2/io/KXmlParser;||setInput||VLL
+instUid 1257||Lorg/kxml2/io/KXmlParser;||getEventType||I
+instUid 1262||Lorg/kxml2/io/KXmlParser;||next||I
+instUid 1269||Lorg/kxml2/io/KXmlParser;||getName||L
+instUid 1275||Lorg/kxml2/io/KXmlParser;||getName||L
+instUid 1281||Lorg/kxml2/io/KXmlParser;||getName||L
+instUid 1287||Lorg/kxml2/io/KXmlParser;||getName||L
+instUid 1293||Lorg/kxml2/io/KXmlParser;||getName||L
+instUid 1299||Lorg/kxml2/io/KXmlParser;||getName||L
+instUid 1305||Lorg/kxml2/io/KXmlParser;||getName||L
+instUid 1311||Lorg/kxml2/io/KXmlParser;||getName||L
+instUid 1316||Lorg/kxml2/io/KXmlParser;||next||I
+instUid 1323||Lorg/kxml2/io/KXmlParser;||getName||L
+instUid 1328||Lorg/kxml2/io/KXmlParser;||next||I
+instUid 1339||Ljava/io/File;||<init>||VL
+instUid 1340||Ljava/io/File;||exists||Z
+instUid 1344||Ljava/io/FileInputStream;||<init>||VL
+instUid 1345||Landroid/util/Xml;||newPullParser||L
+instUid 1348||Luchihal/demo/calendar/CalenderService;||getCalenderInfos||L
+instUid 1350||Ljava/util/ArrayList;||<init>||V
+instUid 1353||Landroid/content/ContextWrapper;||getContentResolver||L
+instUid 1356||Landroid/net/Uri;||parse||LL
+instUid 1356||Landroid/net/Uri;||parse||LL
+p[1]: instUid 1356 #Ljava/lang/String; 0x420cfbc0
+content://com.android.calendar/calendars﻿
+instUid 1359||Landroid/net/Uri;||parse||LL
+instUid 1359||Landroid/net/Uri;||parse||LL
+p[1]: instUid 1359 #Ljava/lang/String; 0x420cfc48
+content://com.android.calendar/events﻿
+instUid 1362||Landroid/net/Uri;||parse||LL
+instUid 1362||Landroid/net/Uri;||parse||LL
+p[1]: instUid 1362 #Ljava/lang/String; 0x420d51d0
+content://com.android.calendar/reminders﻿
+instUid 1368||Landroid/content/ContentResolver;||query||LLLLLL
+instUid 1368||Landroid/content/ContentResolver;||query||LLLLLL
+p[1]: instUid 1368 #Landroid/net/Uri$StringUri; 0x420f1350
+--authority #Landroid/net/Uri$Part; 0x57b1e948
+--uriString #Ljava/lang/String; 0x57b1e95c
+content://com.android.calendar/events﻿
+--ssp #Landroid/net/Uri$Part; 0x57b1e970
+--fragment #Landroid/net/Uri$Part; 0x57b1e984
+--path #Landroid/net/Uri$PathPart; 0x57b1e998
+--query #Landroid/net/Uri$Part; 0x57b1e9ac
+--scheme #Ljava/lang/String; 0x57b1e9c0
+NOT CACHED﻿
+--cachedSsi #I 0x57b1e9d4
+-2
+--cachedFsi #I 0x57b1e9e8
+-2
+p[2]: 
+p[3]: 
+p[4]: 
+p[5]: 
+instUid 1370||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 1373||Landroid/content/ContentResolver$CursorWrapperInner;||close||V
+instUid 1384||Lorg/kxml2/io/KXmlParser;||setInput||VLL
+instUid 1385||Lorg/kxml2/io/KXmlParser;||getEventType||I
+instUid 1390||Lorg/kxml2/io/KXmlParser;||next||I
+instUid 1397||Lorg/kxml2/io/KXmlParser;||getName||L
+instUid 1403||Lorg/kxml2/io/KXmlParser;||getName||L
+instUid 1409||Lorg/kxml2/io/KXmlParser;||getName||L
+instUid 1415||Lorg/kxml2/io/KXmlParser;||getName||L
+instUid 1421||Lorg/kxml2/io/KXmlParser;||getName||L
+instUid 1427||Lorg/kxml2/io/KXmlParser;||getName||L
+instUid 1433||Lorg/kxml2/io/KXmlParser;||getName||L
+instUid 1439||Lorg/kxml2/io/KXmlParser;||getName||L
+instUid 1444||Lorg/kxml2/io/KXmlParser;||next||I
+instUid 1451||Lorg/kxml2/io/KXmlParser;||getName||L
+instUid 1456||Lorg/kxml2/io/KXmlParser;||next||I
+instUid 1466||Ljava/util/ArrayList;||<init>||V
+instUid 1468||Landroid/content/ContextWrapper;||getContentResolver||L
+instUid 1471||Landroid/net/Uri;||parse||LL
+instUid 1471||Landroid/net/Uri;||parse||LL
+p[1]: instUid 1471 #Ljava/lang/String; 0x420c93c0
+content://sms/﻿
+instUid 1493||Landroid/content/ContentResolver;||query||LLLLLL
+instUid 1493||Landroid/content/ContentResolver;||query||LLLLLL
+p[1]: instUid 1493 #Landroid/net/Uri$StringUri; 0x420f71f8
+--authority #Landroid/net/Uri$Part; 0x57b1e948
+--uriString #Ljava/lang/String; 0x57b1e95c
+content://sms/﻿
+--ssp #Landroid/net/Uri$Part; 0x57b1e970
+--fragment #Landroid/net/Uri$Part; 0x57b1e984
+--path #Landroid/net/Uri$PathPart; 0x57b1e998
+--query #Landroid/net/Uri$Part; 0x57b1e9ac
+--scheme #Ljava/lang/String; 0x57b1e9c0
+NOT CACHED﻿
+--cachedSsi #I 0x57b1e9d4
+-2
+--cachedFsi #I 0x57b1e9e8
+-2
+p[2]: instUid 1493 #[Ljava/lang/String; 0x420f7238
+#[Ljava/lang/String; length:5
+instUid 1493 #Ljava/lang/String; 0x4188a650
+_id﻿
+instUid 1493 #Ljava/lang/String; 0x418bfca0
+address﻿
+instUid 1493 #Ljava/lang/String; 0x420c95b0
+date﻿
+instUid 1493 #Ljava/lang/String; 0x41857420
+type﻿
+instUid 1493 #Ljava/lang/String; 0x418c04e0
+body﻿
+p[3]: 
+p[4]: 
+p[5]: instUid 1493 #Ljava/lang/String; 0x420c9670
+ date desc ﻿
+instUid 1495||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 1499||Luchihal/demo/sms/SmsInfo;||<init>||V
+instUid 1501||Landroid/database/CursorWrapper;||getString||LI
+instUid 1504||Landroid/database/CursorWrapper;||getString||LI
+instUid 1507||Landroid/database/CursorWrapper;||getString||LI
+instUid 1510||Landroid/database/CursorWrapper;||getInt||II
+instUid 1513||Landroid/database/CursorWrapper;||getString||LI
+instUid 1515||Luchihal/demo/sms/SmsInfo;||setId||VL
+instUid 1516||Luchihal/demo/sms/SmsInfo;||setAddress||VL
+instUid 1517||Luchihal/demo/sms/SmsInfo;||setDate||VL
+instUid 1518||Luchihal/demo/sms/SmsInfo;||setType||VI
+instUid 1519||Luchihal/demo/sms/SmsInfo;||setBody||VL
+instUid 1520||Ljava/util/ArrayList;||add||ZL
+instUid 1522||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 1525||Landroid/content/ContentResolver$CursorWrapperInner;||close||V
+instUid 1531||Ljava/util/ArrayList;||<init>||V
+instUid 1533||Landroid/content/ContextWrapper;||getContentResolver||L
+instUid 1536||Landroid/net/Uri;||parse||LL
+instUid 1536||Landroid/net/Uri;||parse||LL
+p[1]: instUid 1536 #Ljava/lang/String; 0x420c93c0
+content://sms/﻿
+instUid 1558||Landroid/content/ContentResolver;||query||LLLLLL
+instUid 1558||Landroid/content/ContentResolver;||query||LLLLLL
+p[1]: instUid 1558 #Landroid/net/Uri$StringUri; 0x420fb098
+--authority #Landroid/net/Uri$Part; 0x57b1e948
+--uriString #Ljava/lang/String; 0x57b1e95c
+content://sms/﻿
+--ssp #Landroid/net/Uri$Part; 0x57b1e970
+--fragment #Landroid/net/Uri$Part; 0x57b1e984
+--path #Landroid/net/Uri$PathPart; 0x57b1e998
+--query #Landroid/net/Uri$Part; 0x57b1e9ac
+--scheme #Ljava/lang/String; 0x57b1e9c0
+NOT CACHED﻿
+--cachedSsi #I 0x57b1e9d4
+-2
+--cachedFsi #I 0x57b1e9e8
+-2
+p[2]: instUid 1558 #[Ljava/lang/String; 0x420fb0d8
+#[Ljava/lang/String; length:5
+instUid 1558 #Ljava/lang/String; 0x4188a650
+_id﻿
+instUid 1558 #Ljava/lang/String; 0x418bfca0
+address﻿
+instUid 1558 #Ljava/lang/String; 0x420c95b0
+date﻿
+instUid 1558 #Ljava/lang/String; 0x41857420
+type﻿
+instUid 1558 #Ljava/lang/String; 0x418c04e0
+body﻿
+p[3]: 
+p[4]: 
+p[5]: instUid 1558 #Ljava/lang/String; 0x420c9670
+ date desc ﻿
+instUid 1560||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 1564||Luchihal/demo/sms/SmsInfo;||<init>||V
+instUid 1566||Landroid/database/CursorWrapper;||getString||LI
+instUid 1569||Landroid/database/CursorWrapper;||getString||LI
+instUid 1572||Landroid/database/CursorWrapper;||getString||LI
+instUid 1575||Landroid/database/CursorWrapper;||getInt||II
+instUid 1578||Landroid/database/CursorWrapper;||getString||LI
+instUid 1580||Luchihal/demo/sms/SmsInfo;||setId||VL
+instUid 1581||Luchihal/demo/sms/SmsInfo;||setAddress||VL
+instUid 1582||Luchihal/demo/sms/SmsInfo;||setDate||VL
+instUid 1583||Luchihal/demo/sms/SmsInfo;||setType||VI
+instUid 1584||Luchihal/demo/sms/SmsInfo;||setBody||VL
+instUid 1585||Ljava/util/ArrayList;||add||ZL
+instUid 1587||Landroid/database/CursorWrapper;||moveToNext||Z
+instUid 1590||Landroid/content/ContentResolver$CursorWrapperInner;||close||V
+instUid 1593||Ljava/util/UUID;||fromString||LL
+instUid 1597||Landroid/app/Activity;||<init>||V
+instUid 1601||Ljava/util/ArrayList;||<init>||V
+instUid 1604||Luchihal/demo/Act_demo2$1;||<init>||VL
+instUid 1606||Landroid/content/BroadcastReceiver;||<init>||V
+instUid 1610||Landroid/app/Activity;||onCreate||VL
+instUid 1612||Landroid/app/Activity;||setContentView||VI
+instUid 1613||Luchihal/demo/Act_demo2;||FindView||V
+instUid 1615||Landroid/app/Activity;||findViewById||LI
+instUid 1620||Landroid/app/Activity;||findViewById||LI
+instUid 1625||Landroid/app/Activity;||findViewById||LI
+instUid 1630||Luchihal/demo/Act_demo2;||init||V
+instUid 1633||Luchihal/demo/Act_demo2$2;||<init>||VL
+instUid 1637||Landroid/view/View;||setOnClickListener||VL
+instUid 1640||Luchihal/demo/Act_demo2$3;||<init>||VL
+instUid 1641||Landroid/view/View;||setOnClickListener||VL
+instUid 1644||Luchihal/demo/Act_demo2$4;||<init>||VL
+instUid 1648||Landroid/widget/AdapterView;||setOnItemClickListener||VL
+instUid 1650||Luchihal/demo/Act_demo2;||initList||V
+instUid 1652||Luchihal/demo/Act_demo2;||showList||V
+instUid 1655||Luchihal/demo/adapter/Adapter_demo2;||<init>||VLL
+instUid 1656||Landroid/widget/BaseAdapter;||<init>||V
+instUid 1658||Landroid/view/LayoutInflater;||from||LL
+instUid 1666||Landroid/widget/ListView;||setAdapter||VL
+instUid 1668||Ljava/util/ArrayList;||size||I
+instUid 1672||Ljava/util/ArrayList;||size||I
+instUid 1676||Ljava/util/ArrayList;||size||I
+instUid 1680||Luchihal/demo/Act_demo2;||initBT||V
+instUid 1681||Landroid/bluetooth/BluetoothAdapter;||getDefaultAdapter||L
+instUid 1687||Landroid/bluetooth/BluetoothAdapter;||isEnabled||Z
+instUid 1687||Landroid/bluetooth/BluetoothAdapter;||isEnabled||Z
+instUid 1692||Landroid/content/Intent;||<init>||VL
+instUid 1694||Landroid/app/Activity;||startActivityForResult||VLI
+instUid 1697||Luchihal/demo/Act_demo2;||ensureDiscoverable||V
+instUid 1699||Landroid/bluetooth/BluetoothAdapter;||getScanMode||I
+instUid 1699||Landroid/bluetooth/BluetoothAdapter;||getScanMode||I
+instUid 1705||Landroid/util/Log;||e||ILL
+instUid 1708||Landroid/content/Intent;||<init>||VL
+instUid 1711||Landroid/content/Intent;||putExtra||LLI
+instUid 1712||Landroid/app/Activity;||startActivity||VL
+instUid 1714||Luchihal/demo/Act_demo2;||FindHistory||V
+instUid 1716||Landroid/bluetooth/BluetoothAdapter;||getBondedDevices||L
+instUid 1716||Landroid/bluetooth/BluetoothAdapter;||getBondedDevices||L
+instUid 1718||Ljava/util/Collections$UnmodifiableCollection;||size||I
+instUid 1723||Landroid/util/Log;||e||ILL
+instUid 1728||Landroid/content/IntentFilter;||<init>||VL
+instUid 1730||Landroid/content/ContextWrapper;||registerReceiver||LLL
+instUid 1733||Landroid/content/IntentFilter;||<init>||VL
+instUid 1735||Landroid/content/ContextWrapper;||registerReceiver||LLL
+instUid 1738||Ljava/util/ArrayList;||size||I
+instUid 1742||Ljava/util/ArrayList;||size||I
+instUid 1746||Ljava/util/ArrayList;||size||I
+instUid 1750||Ljava/util/ArrayList;||size||I
+instUid 1756||Landroid/util/Log;||e||ILL
+instUid 1760||Landroid/widget/Toast;||makeText||LLLI
+instUid 1762||Landroid/widget/Toast;||show||V
+instUid 1765||Landroid/bluetooth/BluetoothAdapter;||startDiscovery||Z
+instUid 1765||Landroid/bluetooth/BluetoothAdapter;||startDiscovery||Z
+instUid 1767||Luchihal/demo/Act_demo2;||StartService||V
+instUid 1770||Landroid/content/Intent;||<init>||VLL
+instUid 1771||Landroid/content/ContextWrapper;||startService||LL
+instUid 1775||Ljava/lang/Thread;||<init>||V
+instUid 1779||Luchihal/demo/service/Service_BT;||access$0||L
+instUid 1781||Landroid/bluetooth/BluetoothAdapter;||listenUsingRfcommWithServiceRecord||LLL
+instUid 1781||Landroid/bluetooth/BluetoothAdapter;||listenUsingRfcommWithServiceRecord||LLL
+p[1]: instUid 1781 #Ljava/lang/String; 0x420858a8
+UchihaL﻿
+p[2]: instUid 1781 #Ljava/util/UUID; 0x4211d1b0
+--timestamp #J 0x57ab7198
+134738196340130000
+--node #J 0x57ab71ac
+8796630719078
+--leastSigBits #J 0x57ab71c0
+-8486743226172269978
+--mostSigBits #J 0x57ab71d4
+-394134439838608930
+--hash #I 0x57ab71e8
+-14793880
+--clockSequence #I 0x57ab71fc
+2617
+--variant #I 0x57ab7210
+2
+--version #I 0x57ab7224
+1
+instUid 1785||Landroid/util/Log;||e||ILLL
+instUid 1787||Luchihal/demo/service/Service_BT;||access$1||VLL
+instUid 1791||Luchihal/demo/service/Service_BT;||access$2||LL
+instUid 1794||Ljava/lang/System;||gc||V
+instUid 1795||Landroid/app/Activity;||onDestroy||V

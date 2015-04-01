@@ -1,0 +1,116 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  	<title>APK Static Analysis</title>
+		<link rel="stylesheet" type="text/css" href="/static/styles.css" media="all">
+
+ <script type="text/javascript">
+ var RecaptchaOptions = {
+    theme : 'custom',
+    custom_theme_widget: 'recaptcha_widget'
+ };
+</script>
+
+
+	</head>
+
+	<body>
+    <ul id="nav">
+            <li><a href="staticanalysis">Static</a></li>
+            <li><a href="result">result</a></li>
+            <li><a href="dynamicanalysis">dynamic</a></li>
+          
+        </ul>
+    <center>
+	    <div class="main">
+            <div class="trdr">
+                APK Static Analysis
+            </div>
+            <div class="trdrsub">
+                
+            </div>
+
+            <!-- begin of actual content -->
+            <div class="content">
+                <h1>Submit</h1>
+<p></p>
+
+<form action="/uploadapk" method="post" enctype="multipart/form-data">
+  Upload an Android APK.
+
+  <div class="field-row">
+    <div class="field-name">File</div>
+    <input class="input" name="file" type="file" id="file" style="width: 250px;
+                    padding-left: 0px;
+                    padding-right: 0px;">
+      <div class="another" style="text-align: right;
+                     width: 250px">
+      <input class="button" type="submit" name="submit" value="Analyze">
+    </div>
+  </div>
+</form>
+
+  <br>
+  
+  <br>
+
+<form action="/uploadhash" method="post" enctype="multipart/form-data">
+  
+  <div class="field-row">
+    <div class="field-name">MD5 Hash</div>
+    <input class="input" type="text" id="hash" name="hash" placeholder="Type MD5 hash">
+    <div class="another" style="text-align: right;
+                     width: 250px">
+      <input class="button" type="submit" name="submit" value="Analyze">
+    </div>
+  </div>
+ 
+</form>
+
+                <br>
+                <br>
+                <br>       
+            </div>
+
+
+            <!-- end of actual content -->
+            
+
+
+            
+            <div class="content" style="padding-top: 0px; padding-left: 0px;">
+            <center>
+                <table><tbody><tr>
+                  <td class="footer">
+                    <h class="footer"></h>
+                  </td>
+                </tr></tbody></table>
+            </center>
+            </div>
+
+            <div class="vRand"><img src="/static/blank.gif" alt="-"></div>
+        </div>
+
+        {% ifequal error 'nohash' %}
+              <p style="color: red;">database has no such hash, submit the apk first</p>
+        {% endifequal %}
+        {% ifequal error 'nofile' %}
+              <p style="color: red;">no file upload, submit the apk</p>
+        {% endifequal %}
+        {% ifequal error 'internalerror' %}
+              <p style="color: red;">internal error happened</p>
+        {% endifequal %}
+        {% if success %}
+          <p style="color: red;">file upload successful</p>
+        {% endif %}
+        {% if analyzing %}
+          <p style="color: red;">still analyzing, query later</p>
+        {% endif %}
+
+        
+        
+        <br>
+    </center>
+
+</body></html>

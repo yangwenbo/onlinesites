@@ -1,0 +1,62 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  	<title>APK result</title>
+		<link rel="stylesheet" type="text/css" href="/static/styles.css" media="all">
+
+
+
+
+	</head>
+
+	<body>
+    <ul id="nav">
+            <li><a href="/staticanalysis">Static</a></li>
+            <li><a href="/result">result</a></li>
+            <li><a href="/dynamicanalysis">dynamic</a></li>
+            
+    </ul>
+    {% if resexist %}
+    <div>
+    	<table border="1">
+    {% for item in item_list %}
+    <tr>
+    	<td>{{item.upload_time}}</td>
+    	<td>{{item.md5hash}}</td>
+    	{% if item.static_location %}
+    	<td><a href=static_res/{{item.md5hash}}>static</a></td>
+    	{% else %}
+    	<td>static</td>
+    	{% endif %}
+    	{% if item.dynamic_location %}
+    	<td><a href=dynamic_res/{{item.md5hash}}>dynamic</a></td>
+    	{% else %}
+    	<td>dynamic</td>
+    	{% endif %}
+    	{% if item.download_location %}
+    	<td><a href=download_res/{{item.md5hash}}>download</a></td>
+    	{% else %}
+    	<td>download</td>
+    	{% endif %}
+    </tr>
+    {% endfor %}
+  
+</table>
+</div>
+{% else %}
+<p>no result</p>
+{% endif %}
+
+
+
+<!--
+    {% for item in item_list %}
+    {% endfor %}
+-->
+
+
+
+
+
+</body></html>
