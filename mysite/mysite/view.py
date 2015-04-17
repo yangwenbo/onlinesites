@@ -18,14 +18,14 @@ def static(request):
 
 
 def uploadapk(request):
-	if 'file' in request.FILES:	
+	if 'file' in request.FILES:
 		f = request.FILES['file']
 		apkhash = hashlib.md5(f.read()).hexdigest()
 		try:
 			p = sample.objects.get(md5hash = apkhash)
 		except sample.DoesNotExist:
-			handle_uploaded_file(f,apkhash)
-			static_analysis(apkhash)			
+			handle_uploaded_file(f,apkhash,'s')
+			#static_analysis(apkhash)
 			return render_to_response('static.html',{'success':True})
 		except sample.MultipleObjectsReturned:
 			return render_to_response('static.html',{'error':'internalerror'})
@@ -33,11 +33,11 @@ def uploadapk(request):
 			return static_res(request,apkhash)
 	else:
 		return render_to_response('static.html',{'error':'nofile'})
-	
 
-def handle_uploaded_file(f,h):
+
+def handle_uploaded_file(f,h,flag='n'):
 	#cal hash, create app folder, upload folder, write database
-	
+
 	upload_loc = "files/"+h+"/upload/"
 	if not os.path.exists(upload_loc):
 		os.makedirs(upload_loc)
@@ -60,7 +60,12 @@ def handle_uploaded_file(f,h):
 			p.upload_location=fn
 			p.upload_time=datetime.datetime.now()
 			s.save()
-	
+	if flag == 's':
+		static_analysis(h)
+	if flag == 'd':
+		dynamic_analysis(h)
+
+
 
 def static_analysis(apkhash):
 	static_loc = "files/"+apkhash+"/static/"
@@ -71,7 +76,8 @@ def static_analysis(apkhash):
 	upfile = p.upload_location
 	#need to check upload file is fine!!!!!!!!!!!!
 	if upfile and os.path.isfile(upfile):
-		subprocess.Popen(['python',os.path.dirname(__file__)+'/apkanalysis/static.py',upfile,fn])
+		child = subprocess.call(['python',os.path.dirname(__file__)+'/apkanalysis/static.py',upfile,fn])
+		child.wait()
 		if os.path.isfile(fn):
 			p.static_location = fn
 			p.static_time = datetime.datetime.now()
@@ -127,14 +133,14 @@ def uploadhash_d(request):
 		return render_to_response('dynamic.html',{'error':'nohash'})
 
 def uploadapk_d(request):
-	if 'file' in request.FILES:	
+	if 'file' in request.FILES:
 		f = request.FILES['file']
 		apkhash = hashlib.md5(f.read()).hexdigest()
 		try:
 			p = sample.objects.get(md5hash = apkhash)
 		except sample.DoesNotExist:
-			handle_uploaded_file(f,apkhash)
-			dynamic_analysis(apkhash)			
+			handle_uploaded_file(f,apkhash,'d')
+			#dynamic_analysis(apkhash)
 			return render_to_response('dynamic.html',{'success':True})
 		except sample.MultipleObjectsReturned:
 			return render_to_response('dynamic.html',{'error':'internalerror'})
@@ -193,7 +199,8 @@ def dynamic_analysis(apkhash):
 		'''
 
 def run_dynamic_analysis(p,upfile,dynamic_loc):
-	subprocess.call(["python",cur_dir+"/apkanalysis/conf/all.py",upfile,dynamic_loc])
+	child = subprocess.call(["python",cur_dir+"/apkanalysis/conf/all.py",upfile,dynamic_loc])
+	child.wait()
 	dy_fn = dynamic_loc + "parseRes/behavior"
 	dl_fn = dynamic_loc + "download.zip"
 	if os.path.isfile(dy_fn):
