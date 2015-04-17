@@ -1,0 +1,173 @@
+=============声明权限=============
+android.permission.BLUETOOTH
+android.permission.BLUETOOTH_ADMIN
+android.permission.KILL_BACKGROUND_PROCESSES
+android.permission.READ_SMS
+android.permission.WRITE_SMS
+android.permission.WRITE_EXTERNAL_STORAGE
+android.permission.READ_CONTACTS
+android.permission.WRITE_CONTACTS
+android.permission.READ_CALENDAR
+android.permission.WRITE_CALENDAR
+**********写通讯录****************
+ Luchihal/demo/calendar/CalenderService;->getCalenderInfos()Ljava/util/List; ---> Landroid/content/ContentResolver;->query(Landroid/net/Uri; [Ljava/lang/String; Ljava/lang/String; [Ljava/lang/String; Ljava/lang/String;)Landroid/database/Cursor;
+ Luchihal/demo/calendar/CalenderService;->restore(Ljava/lang/String;)V ---> Landroid/content/ContentResolver;->insert(Landroid/net/Uri; Landroid/content/ContentValues;)Landroid/net/Uri;
+ Luchihal/demo/contact/ContactService;->getContactInfos()Ljava/util/List; ---> Landroid/content/ContentResolver;->query(Landroid/net/Uri; [Ljava/lang/String; Ljava/lang/String; [Ljava/lang/String; Ljava/lang/String;)Landroid/database/Cursor;
+ Luchihal/demo/contact/ContactService;->getContactInfos()Ljava/util/List; ---> Landroid/content/ContentResolver;->query(Landroid/net/Uri; [Ljava/lang/String; Ljava/lang/String; [Ljava/lang/String; Ljava/lang/String;)Landroid/database/Cursor;
+ Luchihal/demo/contact/ContactService;->restore(Ljava/lang/String;)V ---> Landroid/content/ContentResolver;->insert(Landroid/net/Uri; Landroid/content/ContentValues;)Landroid/net/Uri;
+ Luchihal/demo/contact/ContactService;->restore(Ljava/lang/String;)V ---> Landroid/content/ContentResolver;->insert(Landroid/net/Uri; Landroid/content/ContentValues;)Landroid/net/Uri;
+ Luchihal/demo/contact/ContactService;->restore(Ljava/lang/String;)V ---> Landroid/content/ContentResolver;->insert(Landroid/net/Uri; Landroid/content/ContentValues;)Landroid/net/Uri;
+ Luchihal/demo/contact/ContactService;->restore(Ljava/lang/String;)V ---> Landroid/content/ContentResolver;->insert(Landroid/net/Uri; Landroid/content/ContentValues;)Landroid/net/Uri;
+ Luchihal/demo/sms/SmsService;->getSmsInfo()Ljava/util/List; ---> Landroid/content/ContentResolver;->query(Landroid/net/Uri; [Ljava/lang/String; Ljava/lang/String; [Ljava/lang/String; Ljava/lang/String;)Landroid/database/Cursor;
+ Luchihal/demo/sms/SmsService;->restore(Ljava/lang/String;)V ---> Landroid/content/ContentResolver;->insert(Landroid/net/Uri; Landroid/content/ContentValues;)Landroid/net/Uri;
+ Landroid/support/v4/content/CursorLoader;->loadInBackground()Landroid/database/Cursor; ---> Landroid/content/ContentResolver;->query(Landroid/net/Uri; [Ljava/lang/String; Ljava/lang/String; [Ljava/lang/String; Ljava/lang/String;)Landroid/database/Cursor;
+ Landroid/support/v4/content/FileProvider;-><init>()V ---> Landroid/content/ContentProvider;-><init>()V
+ Landroid/support/v4/content/FileProvider;->attachInfo(Landroid/content/Context; Landroid/content/pm/ProviderInfo;)V ---> Landroid/content/ContentProvider;->attachInfo(Landroid/content/Context; Landroid/content/pm/ProviderInfo;)V
+ Luchihal/demo/calendar/CalenderService;->getCalenderInfos()Ljava/util/List; ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+ Luchihal/demo/calendar/CalenderService;->getCalenderInfos()Ljava/util/List; ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+ Luchihal/demo/calendar/CalenderService;->getCalenderInfos()Ljava/util/List; ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+ Luchihal/demo/calendar/CalenderService;->restore(Ljava/lang/String;)V ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+ Luchihal/demo/contact/ContactService;->getContactInfos()Ljava/util/List; ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+ Luchihal/demo/contact/ContactService;->getContactInfos()Ljava/util/List; ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+ Luchihal/demo/sms/SmsService;->getSmsInfo()Ljava/util/List; ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+ Luchihal/demo/sms/SmsService;->restore(Ljava/lang/String;)V ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+ Landroid/support/v4/widget/SimpleCursorAdapter;->setViewImage(Landroid/widget/ImageView; Ljava/lang/String;)V ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+**********查看网络状态****************
+ Landroid/support/v4/net/ConnectivityManagerCompat;->getNetworkInfoFromBroadcast(Landroid/net/ConnectivityManager; Landroid/content/Intent;)Landroid/net/NetworkInfo; ---> Landroid/net/ConnectivityManager;->getNetworkInfo(I)Landroid/net/NetworkInfo;
+ Landroid/support/v4/net/ConnectivityManagerCompatGingerbread;->isActiveNetworkMetered(Landroid/net/ConnectivityManager;)Z ---> Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
+ Landroid/support/v4/net/ConnectivityManagerCompatHoneycombMR2;->isActiveNetworkMetered(Landroid/net/ConnectivityManager;)Z ---> Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
+ Landroid/support/v4/net/ConnectivityManagerCompat$BaseConnectivityManagerCompatImpl;->isActiveNetworkMetered(Landroid/net/ConnectivityManager;)Z ---> Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
+**********读短信或彩信****************
+ Luchihal/demo/calendar/CalenderService;->getCalenderInfos()Ljava/util/List; ---> Landroid/content/ContentResolver;->query(Landroid/net/Uri; [Ljava/lang/String; Ljava/lang/String; [Ljava/lang/String; Ljava/lang/String;)Landroid/database/Cursor;
+ Luchihal/demo/calendar/CalenderService;->restore(Ljava/lang/String;)V ---> Landroid/content/ContentResolver;->insert(Landroid/net/Uri; Landroid/content/ContentValues;)Landroid/net/Uri;
+ Luchihal/demo/contact/ContactService;->getContactInfos()Ljava/util/List; ---> Landroid/content/ContentResolver;->query(Landroid/net/Uri; [Ljava/lang/String; Ljava/lang/String; [Ljava/lang/String; Ljava/lang/String;)Landroid/database/Cursor;
+ Luchihal/demo/contact/ContactService;->getContactInfos()Ljava/util/List; ---> Landroid/content/ContentResolver;->query(Landroid/net/Uri; [Ljava/lang/String; Ljava/lang/String; [Ljava/lang/String; Ljava/lang/String;)Landroid/database/Cursor;
+ Luchihal/demo/contact/ContactService;->restore(Ljava/lang/String;)V ---> Landroid/content/ContentResolver;->insert(Landroid/net/Uri; Landroid/content/ContentValues;)Landroid/net/Uri;
+ Luchihal/demo/contact/ContactService;->restore(Ljava/lang/String;)V ---> Landroid/content/ContentResolver;->insert(Landroid/net/Uri; Landroid/content/ContentValues;)Landroid/net/Uri;
+ Luchihal/demo/contact/ContactService;->restore(Ljava/lang/String;)V ---> Landroid/content/ContentResolver;->insert(Landroid/net/Uri; Landroid/content/ContentValues;)Landroid/net/Uri;
+ Luchihal/demo/contact/ContactService;->restore(Ljava/lang/String;)V ---> Landroid/content/ContentResolver;->insert(Landroid/net/Uri; Landroid/content/ContentValues;)Landroid/net/Uri;
+ Luchihal/demo/sms/SmsService;->getSmsInfo()Ljava/util/List; ---> Landroid/content/ContentResolver;->query(Landroid/net/Uri; [Ljava/lang/String; Ljava/lang/String; [Ljava/lang/String; Ljava/lang/String;)Landroid/database/Cursor;
+ Luchihal/demo/sms/SmsService;->restore(Ljava/lang/String;)V ---> Landroid/content/ContentResolver;->insert(Landroid/net/Uri; Landroid/content/ContentValues;)Landroid/net/Uri;
+ Landroid/support/v4/content/CursorLoader;->loadInBackground()Landroid/database/Cursor; ---> Landroid/content/ContentResolver;->query(Landroid/net/Uri; [Ljava/lang/String; Ljava/lang/String; [Ljava/lang/String; Ljava/lang/String;)Landroid/database/Cursor;
+ Landroid/support/v4/content/FileProvider;-><init>()V ---> Landroid/content/ContentProvider;-><init>()V
+ Landroid/support/v4/content/FileProvider;->attachInfo(Landroid/content/Context; Landroid/content/pm/ProviderInfo;)V ---> Landroid/content/ContentProvider;->attachInfo(Landroid/content/Context; Landroid/content/pm/ProviderInfo;)V
+ Luchihal/demo/calendar/CalenderService;->getCalenderInfos()Ljava/util/List; ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+ Luchihal/demo/calendar/CalenderService;->getCalenderInfos()Ljava/util/List; ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+ Luchihal/demo/calendar/CalenderService;->getCalenderInfos()Ljava/util/List; ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+ Luchihal/demo/calendar/CalenderService;->restore(Ljava/lang/String;)V ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+ Luchihal/demo/contact/ContactService;->getContactInfos()Ljava/util/List; ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+ Luchihal/demo/contact/ContactService;->getContactInfos()Ljava/util/List; ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+ Luchihal/demo/sms/SmsService;->getSmsInfo()Ljava/util/List; ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+ Luchihal/demo/sms/SmsService;->restore(Ljava/lang/String;)V ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+ Landroid/support/v4/widget/SimpleCursorAdapter;->setViewImage(Landroid/widget/ImageView; Ljava/lang/String;)V ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+**********恢复出厂设置****************
+['Landroid/content/pm/ApplicationInfo;', 'flags', 'I'] ---> Luchihal/demo/Act_demo1;->initList()V
+**********读日历事件****************
+ Luchihal/demo/calendar/CalenderService;->getCalenderInfos()Ljava/util/List; ---> Landroid/content/ContentResolver;->query(Landroid/net/Uri; [Ljava/lang/String; Ljava/lang/String; [Ljava/lang/String; Ljava/lang/String;)Landroid/database/Cursor;
+ Luchihal/demo/calendar/CalenderService;->restore(Ljava/lang/String;)V ---> Landroid/content/ContentResolver;->insert(Landroid/net/Uri; Landroid/content/ContentValues;)Landroid/net/Uri;
+ Luchihal/demo/contact/ContactService;->getContactInfos()Ljava/util/List; ---> Landroid/content/ContentResolver;->query(Landroid/net/Uri; [Ljava/lang/String; Ljava/lang/String; [Ljava/lang/String; Ljava/lang/String;)Landroid/database/Cursor;
+ Luchihal/demo/contact/ContactService;->getContactInfos()Ljava/util/List; ---> Landroid/content/ContentResolver;->query(Landroid/net/Uri; [Ljava/lang/String; Ljava/lang/String; [Ljava/lang/String; Ljava/lang/String;)Landroid/database/Cursor;
+ Luchihal/demo/contact/ContactService;->restore(Ljava/lang/String;)V ---> Landroid/content/ContentResolver;->insert(Landroid/net/Uri; Landroid/content/ContentValues;)Landroid/net/Uri;
+ Luchihal/demo/contact/ContactService;->restore(Ljava/lang/String;)V ---> Landroid/content/ContentResolver;->insert(Landroid/net/Uri; Landroid/content/ContentValues;)Landroid/net/Uri;
+ Luchihal/demo/contact/ContactService;->restore(Ljava/lang/String;)V ---> Landroid/content/ContentResolver;->insert(Landroid/net/Uri; Landroid/content/ContentValues;)Landroid/net/Uri;
+ Luchihal/demo/contact/ContactService;->restore(Ljava/lang/String;)V ---> Landroid/content/ContentResolver;->insert(Landroid/net/Uri; Landroid/content/ContentValues;)Landroid/net/Uri;
+ Luchihal/demo/sms/SmsService;->getSmsInfo()Ljava/util/List; ---> Landroid/content/ContentResolver;->query(Landroid/net/Uri; [Ljava/lang/String; Ljava/lang/String; [Ljava/lang/String; Ljava/lang/String;)Landroid/database/Cursor;
+ Luchihal/demo/sms/SmsService;->restore(Ljava/lang/String;)V ---> Landroid/content/ContentResolver;->insert(Landroid/net/Uri; Landroid/content/ContentValues;)Landroid/net/Uri;
+ Landroid/support/v4/content/CursorLoader;->loadInBackground()Landroid/database/Cursor; ---> Landroid/content/ContentResolver;->query(Landroid/net/Uri; [Ljava/lang/String; Ljava/lang/String; [Ljava/lang/String; Ljava/lang/String;)Landroid/database/Cursor;
+ Landroid/support/v4/content/FileProvider;-><init>()V ---> Landroid/content/ContentProvider;-><init>()V
+ Landroid/support/v4/content/FileProvider;->attachInfo(Landroid/content/Context; Landroid/content/pm/ProviderInfo;)V ---> Landroid/content/ContentProvider;->attachInfo(Landroid/content/Context; Landroid/content/pm/ProviderInfo;)V
+ Luchihal/demo/calendar/CalenderService;->getCalenderInfos()Ljava/util/List; ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+ Luchihal/demo/calendar/CalenderService;->getCalenderInfos()Ljava/util/List; ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+ Luchihal/demo/calendar/CalenderService;->getCalenderInfos()Ljava/util/List; ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+ Luchihal/demo/calendar/CalenderService;->restore(Ljava/lang/String;)V ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+ Luchihal/demo/contact/ContactService;->getContactInfos()Ljava/util/List; ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+ Luchihal/demo/contact/ContactService;->getContactInfos()Ljava/util/List; ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+ Luchihal/demo/sms/SmsService;->getSmsInfo()Ljava/util/List; ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+ Luchihal/demo/sms/SmsService;->restore(Ljava/lang/String;)V ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+ Landroid/support/v4/widget/SimpleCursorAdapter;->setViewImage(Landroid/widget/ImageView; Ljava/lang/String;)V ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+**********编辑短信或彩信****************
+ Luchihal/demo/calendar/CalenderService;->getCalenderInfos()Ljava/util/List; ---> Landroid/content/ContentResolver;->query(Landroid/net/Uri; [Ljava/lang/String; Ljava/lang/String; [Ljava/lang/String; Ljava/lang/String;)Landroid/database/Cursor;
+ Luchihal/demo/calendar/CalenderService;->restore(Ljava/lang/String;)V ---> Landroid/content/ContentResolver;->insert(Landroid/net/Uri; Landroid/content/ContentValues;)Landroid/net/Uri;
+ Luchihal/demo/contact/ContactService;->getContactInfos()Ljava/util/List; ---> Landroid/content/ContentResolver;->query(Landroid/net/Uri; [Ljava/lang/String; Ljava/lang/String; [Ljava/lang/String; Ljava/lang/String;)Landroid/database/Cursor;
+ Luchihal/demo/contact/ContactService;->getContactInfos()Ljava/util/List; ---> Landroid/content/ContentResolver;->query(Landroid/net/Uri; [Ljava/lang/String; Ljava/lang/String; [Ljava/lang/String; Ljava/lang/String;)Landroid/database/Cursor;
+ Luchihal/demo/contact/ContactService;->restore(Ljava/lang/String;)V ---> Landroid/content/ContentResolver;->insert(Landroid/net/Uri; Landroid/content/ContentValues;)Landroid/net/Uri;
+ Luchihal/demo/contact/ContactService;->restore(Ljava/lang/String;)V ---> Landroid/content/ContentResolver;->insert(Landroid/net/Uri; Landroid/content/ContentValues;)Landroid/net/Uri;
+ Luchihal/demo/contact/ContactService;->restore(Ljava/lang/String;)V ---> Landroid/content/ContentResolver;->insert(Landroid/net/Uri; Landroid/content/ContentValues;)Landroid/net/Uri;
+ Luchihal/demo/contact/ContactService;->restore(Ljava/lang/String;)V ---> Landroid/content/ContentResolver;->insert(Landroid/net/Uri; Landroid/content/ContentValues;)Landroid/net/Uri;
+ Luchihal/demo/sms/SmsService;->getSmsInfo()Ljava/util/List; ---> Landroid/content/ContentResolver;->query(Landroid/net/Uri; [Ljava/lang/String; Ljava/lang/String; [Ljava/lang/String; Ljava/lang/String;)Landroid/database/Cursor;
+ Luchihal/demo/sms/SmsService;->restore(Ljava/lang/String;)V ---> Landroid/content/ContentResolver;->insert(Landroid/net/Uri; Landroid/content/ContentValues;)Landroid/net/Uri;
+ Landroid/support/v4/content/CursorLoader;->loadInBackground()Landroid/database/Cursor; ---> Landroid/content/ContentResolver;->query(Landroid/net/Uri; [Ljava/lang/String; Ljava/lang/String; [Ljava/lang/String; Ljava/lang/String;)Landroid/database/Cursor;
+ Landroid/support/v4/content/FileProvider;-><init>()V ---> Landroid/content/ContentProvider;-><init>()V
+ Landroid/support/v4/content/FileProvider;->attachInfo(Landroid/content/Context; Landroid/content/pm/ProviderInfo;)V ---> Landroid/content/ContentProvider;->attachInfo(Landroid/content/Context; Landroid/content/pm/ProviderInfo;)V
+ Luchihal/demo/calendar/CalenderService;->getCalenderInfos()Ljava/util/List; ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+ Luchihal/demo/calendar/CalenderService;->getCalenderInfos()Ljava/util/List; ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+ Luchihal/demo/calendar/CalenderService;->getCalenderInfos()Ljava/util/List; ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+ Luchihal/demo/calendar/CalenderService;->restore(Ljava/lang/String;)V ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+ Luchihal/demo/contact/ContactService;->getContactInfos()Ljava/util/List; ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+ Luchihal/demo/contact/ContactService;->getContactInfos()Ljava/util/List; ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+ Luchihal/demo/sms/SmsService;->getSmsInfo()Ljava/util/List; ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+ Luchihal/demo/sms/SmsService;->restore(Ljava/lang/String;)V ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+ Landroid/support/v4/widget/SimpleCursorAdapter;->setViewImage(Landroid/widget/ImageView; Ljava/lang/String;)V ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+**********使用蓝牙****************
+ Luchihal/demo/Act_demo2$1;->onReceive(Landroid/content/Context; Landroid/content/Intent;)V ---> Landroid/bluetooth/BluetoothDevice;->getBondState()I
+ Luchihal/demo/Act_demo2$1;->onReceive(Landroid/content/Context; Landroid/content/Intent;)V ---> Landroid/bluetooth/BluetoothDevice;->getName()Ljava/lang/String;
+ Luchihal/demo/Act_demo2$4;->onItemClick(Landroid/widget/AdapterView; Landroid/view/View; I J)V ---> Landroid/bluetooth/BluetoothDevice;->getName()Ljava/lang/String;
+ Luchihal/demo/Act_demo2$ConnectThread;-><init>(Luchihal/demo/Act_demo2; Landroid/bluetooth/BluetoothDevice; Z)V ---> Landroid/bluetooth/BluetoothDevice;->createRfcommSocketToServiceRecord(Ljava/util/UUID;)Landroid/bluetooth/BluetoothSocket;
+ Luchihal/demo/Act_demo2;->FindHistory()V ---> Landroid/bluetooth/BluetoothDevice;->getName()Ljava/lang/String;
+ Luchihal/demo/adapter/Adapter_demo2;->getView(I Landroid/view/View; Landroid/view/ViewGroup;)Landroid/view/View; ---> Landroid/bluetooth/BluetoothDevice;->getName()Ljava/lang/String;
+ Luchihal/demo/Act_demo2$ConnectThread;->run()V ---> Landroid/bluetooth/BluetoothSocket;->connect()V
+ Luchihal/demo/Act_demo2$2;->onClick(Landroid/view/View;)V ---> Landroid/bluetooth/BluetoothAdapter;->startDiscovery()Z
+ Luchihal/demo/Act_demo2$ConnectThread;->run()V ---> Landroid/bluetooth/BluetoothAdapter;->cancelDiscovery()Z
+ Luchihal/demo/Act_demo2;->FindHistory()V ---> Landroid/bluetooth/BluetoothAdapter;->getBondedDevices()Ljava/util/Set;
+ Luchihal/demo/Act_demo2;->ensureDiscoverable()V ---> Landroid/bluetooth/BluetoothAdapter;->getScanMode()I
+ Luchihal/demo/Act_demo2;->initBT()V ---> Landroid/bluetooth/BluetoothAdapter;->isEnabled()Z
+ Luchihal/demo/domain/BlueTooth$AcceptThread;-><init>(Luchihal/demo/domain/BlueTooth; Z)V ---> Landroid/bluetooth/BluetoothAdapter;->listenUsingRfcommWithServiceRecord(Ljava/lang/String; Ljava/util/UUID;)Landroid/bluetooth/BluetoothServerSocket;
+ Luchihal/demo/service/Service_BT$AcceptThread;-><init>(Luchihal/demo/service/Service_BT; Z)V ---> Landroid/bluetooth/BluetoothAdapter;->listenUsingRfcommWithServiceRecord(Ljava/lang/String; Ljava/util/UUID;)Landroid/bluetooth/BluetoothServerSocket;
+**********读通讯录****************
+ Luchihal/demo/calendar/CalenderService;->getCalenderInfos()Ljava/util/List; ---> Landroid/content/ContentResolver;->query(Landroid/net/Uri; [Ljava/lang/String; Ljava/lang/String; [Ljava/lang/String; Ljava/lang/String;)Landroid/database/Cursor;
+ Luchihal/demo/calendar/CalenderService;->restore(Ljava/lang/String;)V ---> Landroid/content/ContentResolver;->insert(Landroid/net/Uri; Landroid/content/ContentValues;)Landroid/net/Uri;
+ Luchihal/demo/contact/ContactService;->getContactInfos()Ljava/util/List; ---> Landroid/content/ContentResolver;->query(Landroid/net/Uri; [Ljava/lang/String; Ljava/lang/String; [Ljava/lang/String; Ljava/lang/String;)Landroid/database/Cursor;
+ Luchihal/demo/contact/ContactService;->getContactInfos()Ljava/util/List; ---> Landroid/content/ContentResolver;->query(Landroid/net/Uri; [Ljava/lang/String; Ljava/lang/String; [Ljava/lang/String; Ljava/lang/String;)Landroid/database/Cursor;
+ Luchihal/demo/contact/ContactService;->restore(Ljava/lang/String;)V ---> Landroid/content/ContentResolver;->insert(Landroid/net/Uri; Landroid/content/ContentValues;)Landroid/net/Uri;
+ Luchihal/demo/contact/ContactService;->restore(Ljava/lang/String;)V ---> Landroid/content/ContentResolver;->insert(Landroid/net/Uri; Landroid/content/ContentValues;)Landroid/net/Uri;
+ Luchihal/demo/contact/ContactService;->restore(Ljava/lang/String;)V ---> Landroid/content/ContentResolver;->insert(Landroid/net/Uri; Landroid/content/ContentValues;)Landroid/net/Uri;
+ Luchihal/demo/contact/ContactService;->restore(Ljava/lang/String;)V ---> Landroid/content/ContentResolver;->insert(Landroid/net/Uri; Landroid/content/ContentValues;)Landroid/net/Uri;
+ Luchihal/demo/sms/SmsService;->getSmsInfo()Ljava/util/List; ---> Landroid/content/ContentResolver;->query(Landroid/net/Uri; [Ljava/lang/String; Ljava/lang/String; [Ljava/lang/String; Ljava/lang/String;)Landroid/database/Cursor;
+ Luchihal/demo/sms/SmsService;->restore(Ljava/lang/String;)V ---> Landroid/content/ContentResolver;->insert(Landroid/net/Uri; Landroid/content/ContentValues;)Landroid/net/Uri;
+ Landroid/support/v4/content/CursorLoader;->loadInBackground()Landroid/database/Cursor; ---> Landroid/content/ContentResolver;->query(Landroid/net/Uri; [Ljava/lang/String; Ljava/lang/String; [Ljava/lang/String; Ljava/lang/String;)Landroid/database/Cursor;
+ Landroid/support/v4/content/FileProvider;-><init>()V ---> Landroid/content/ContentProvider;-><init>()V
+ Landroid/support/v4/content/FileProvider;->attachInfo(Landroid/content/Context; Landroid/content/pm/ProviderInfo;)V ---> Landroid/content/ContentProvider;->attachInfo(Landroid/content/Context; Landroid/content/pm/ProviderInfo;)V
+ Luchihal/demo/calendar/CalenderService;->getCalenderInfos()Ljava/util/List; ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+ Luchihal/demo/calendar/CalenderService;->getCalenderInfos()Ljava/util/List; ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+ Luchihal/demo/calendar/CalenderService;->getCalenderInfos()Ljava/util/List; ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+ Luchihal/demo/calendar/CalenderService;->restore(Ljava/lang/String;)V ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+ Luchihal/demo/contact/ContactService;->getContactInfos()Ljava/util/List; ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+ Luchihal/demo/contact/ContactService;->getContactInfos()Ljava/util/List; ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+ Luchihal/demo/sms/SmsService;->getSmsInfo()Ljava/util/List; ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+ Luchihal/demo/sms/SmsService;->restore(Ljava/lang/String;)V ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+ Landroid/support/v4/widget/SimpleCursorAdapter;->setViewImage(Landroid/widget/ImageView; Ljava/lang/String;)V ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+**********写日历事件****************
+ Luchihal/demo/calendar/CalenderService;->getCalenderInfos()Ljava/util/List; ---> Landroid/content/ContentResolver;->query(Landroid/net/Uri; [Ljava/lang/String; Ljava/lang/String; [Ljava/lang/String; Ljava/lang/String;)Landroid/database/Cursor;
+ Luchihal/demo/calendar/CalenderService;->restore(Ljava/lang/String;)V ---> Landroid/content/ContentResolver;->insert(Landroid/net/Uri; Landroid/content/ContentValues;)Landroid/net/Uri;
+ Luchihal/demo/contact/ContactService;->getContactInfos()Ljava/util/List; ---> Landroid/content/ContentResolver;->query(Landroid/net/Uri; [Ljava/lang/String; Ljava/lang/String; [Ljava/lang/String; Ljava/lang/String;)Landroid/database/Cursor;
+ Luchihal/demo/contact/ContactService;->getContactInfos()Ljava/util/List; ---> Landroid/content/ContentResolver;->query(Landroid/net/Uri; [Ljava/lang/String; Ljava/lang/String; [Ljava/lang/String; Ljava/lang/String;)Landroid/database/Cursor;
+ Luchihal/demo/contact/ContactService;->restore(Ljava/lang/String;)V ---> Landroid/content/ContentResolver;->insert(Landroid/net/Uri; Landroid/content/ContentValues;)Landroid/net/Uri;
+ Luchihal/demo/contact/ContactService;->restore(Ljava/lang/String;)V ---> Landroid/content/ContentResolver;->insert(Landroid/net/Uri; Landroid/content/ContentValues;)Landroid/net/Uri;
+ Luchihal/demo/contact/ContactService;->restore(Ljava/lang/String;)V ---> Landroid/content/ContentResolver;->insert(Landroid/net/Uri; Landroid/content/ContentValues;)Landroid/net/Uri;
+ Luchihal/demo/contact/ContactService;->restore(Ljava/lang/String;)V ---> Landroid/content/ContentResolver;->insert(Landroid/net/Uri; Landroid/content/ContentValues;)Landroid/net/Uri;
+ Luchihal/demo/sms/SmsService;->getSmsInfo()Ljava/util/List; ---> Landroid/content/ContentResolver;->query(Landroid/net/Uri; [Ljava/lang/String; Ljava/lang/String; [Ljava/lang/String; Ljava/lang/String;)Landroid/database/Cursor;
+ Luchihal/demo/sms/SmsService;->restore(Ljava/lang/String;)V ---> Landroid/content/ContentResolver;->insert(Landroid/net/Uri; Landroid/content/ContentValues;)Landroid/net/Uri;
+ Landroid/support/v4/content/CursorLoader;->loadInBackground()Landroid/database/Cursor; ---> Landroid/content/ContentResolver;->query(Landroid/net/Uri; [Ljava/lang/String; Ljava/lang/String; [Ljava/lang/String; Ljava/lang/String;)Landroid/database/Cursor;
+ Landroid/support/v4/content/FileProvider;-><init>()V ---> Landroid/content/ContentProvider;-><init>()V
+ Landroid/support/v4/content/FileProvider;->attachInfo(Landroid/content/Context; Landroid/content/pm/ProviderInfo;)V ---> Landroid/content/ContentProvider;->attachInfo(Landroid/content/Context; Landroid/content/pm/ProviderInfo;)V
+ Luchihal/demo/calendar/CalenderService;->getCalenderInfos()Ljava/util/List; ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+ Luchihal/demo/calendar/CalenderService;->getCalenderInfos()Ljava/util/List; ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+ Luchihal/demo/calendar/CalenderService;->getCalenderInfos()Ljava/util/List; ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+ Luchihal/demo/calendar/CalenderService;->restore(Ljava/lang/String;)V ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+ Luchihal/demo/contact/ContactService;->getContactInfos()Ljava/util/List; ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+ Luchihal/demo/contact/ContactService;->getContactInfos()Ljava/util/List; ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+ Luchihal/demo/sms/SmsService;->getSmsInfo()Ljava/util/List; ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+ Luchihal/demo/sms/SmsService;->restore(Ljava/lang/String;)V ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+ Landroid/support/v4/widget/SimpleCursorAdapter;->setViewImage(Landroid/widget/ImageView; Ljava/lang/String;)V ---> Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+**********命令执行****************
+ Luchihal/demo/util/MyTool;->runCommand(Ljava/lang/String;)Ljava/lang/String; ---> Ljava/lang/Runtime;->exec(Ljava/lang/String;)Ljava/lang/Process;

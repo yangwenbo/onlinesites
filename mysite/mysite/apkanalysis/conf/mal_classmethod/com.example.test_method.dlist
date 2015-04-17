@@ -1,0 +1,3 @@
+Landroid/net/ConnectivityManager;getActiveNetworkInfo
+Landroid/content/ContentResolver;openInputStream
+Landroid/net/ConnectivityManager;getNetworkInfo
