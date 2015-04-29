@@ -10,6 +10,8 @@ class sample(models.Model):
 	upload_time = models.DateTimeField(null= True)
 	static_time = models.DateTimeField(null= True)
 	dynamic_time = models.DateTimeField(null= True)
+	static_status = models.IntegerField(null= True)
+	dynamic_status = models.IntegerField(null= True)
 
 	def __unicode__(self):
 		return self.md5hash

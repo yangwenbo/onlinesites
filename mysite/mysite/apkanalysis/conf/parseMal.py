@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
-import binascii
-import re, os, sys
+import binascii,re, os, sys
 sys.path.append("/home/ywb/tools/androguard/")
 from androguard.core.bytecodes import apk
 from androguard.core.bytecodes import dvm

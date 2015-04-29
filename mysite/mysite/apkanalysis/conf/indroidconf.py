@@ -1,16 +1,23 @@
 #!/usr/bin/env python
-import os
-import sys
+import os,sys,subprocess
 import conf
-import subprocess
-#adbPath = "adb -s emulator-5554 "
-adbPath = conf.adbPath 
+
+
+
+
 opt = sys.argv[1]
 APKFile = sys.argv[2]
 package = sys.argv[3]
+adbPath = sys.argv[4]
+print opt
+print APKFile
+print package
+print adbPath
+
 '''
 perms,apis,all,def,mal
 '''
+
 cur_dir = os.path.split(os.path.realpath(__file__))[0]
 #os.chdir("./config")
 #os.popen("./gen_class_dlist.sh "+sys.argv[1]+" " + sys.argv[2])

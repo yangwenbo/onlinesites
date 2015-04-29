@@ -1,12 +1,19 @@
 #!/usr/bin/env python
-import subprocess
-import sys
-import os
+import subprocess,sys,os
 import conf
 sys.path.append("/home/ywb/tools/androguard/")
 from androguard.core.bytecodes import apk
 
-adbPath = conf.adbPath
+
+serialnum = ""
+adbPath = "adb "
+
+if len(sys.argv) > 2:
+	path = sys.argv[2]
+	if len(sys.argv) > 3:
+		serialnum = sys.argv[3]
+		adbPath = adbPath + "-s " + serialnum +" "
+
 option = conf.autoconf
 '''
 option can be perms, apis, all, def.
@@ -19,17 +26,18 @@ cur_dir = os.path.split(os.path.realpath(__file__))[0]
 APKFile = sys.argv[1]
 subprocess.call(adbPath + "install " + APKFile, shell=True)
 subprocess.call(adbPath + "shell chmod 664 /data/system/packages.list", shell=True)
+
 a = apk.APK(APKFile)
 p = a.get_package()
-subprocess.call(["python", cur_dir+"/indroidconf.py", option, APKFile,p])
+subprocess.call(["python", cur_dir+"/indroidconf.py", option, APKFile, p, adbPath])
+
 ma = a.get_main_activity()
 subprocess.call(adbPath + "shell am start "+p+"/"+ma, shell=True)
-subprocess.call(adbPath + "shell monkey -p " + p + "  -s 500 --monitor-native-crashes -v -v -v 1000", shell=True)
-if len(sys.argv) == 3:
-	path = sys.argv[2]
-	subprocess.call("python "+cur_dir+"/pullfile.py "+APKFile+" "+path, shell=True)
+subprocess.call(adbPath + "shell monkey -p " + p + "  -s 500 1000", shell=True)
+if len(sys.argv) > 2 :
+	subprocess.call(["python",cur_dir+"/pullfile.py",APKFile,adbPath,path])
 	subprocess.call("zip -r "+path+"/download.zip "+path, shell=True)
 else:
-	subprocess.call("python "+cur_dir+"/pullfile.py "+APKFile, shell=True)
-subprocess.call(adbPath + "uninstall " + p, shell=True)
+	subprocess.call(["python",cur_dir+"/pullfile.py",APKFile,adbPath])
 
+subprocess.call(adbPath + "uninstall " + p, shell=True)

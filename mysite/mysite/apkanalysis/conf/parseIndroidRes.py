@@ -1,9 +1,7 @@
 #!/usr/bin/env python
 
-import binascii
+import binascii,re,os
 from sys import argv
-import re
-import os
 
 PATTER1 = '^instUid \d+ #(.*) 0x'
 PATTER2 = '^--(.*) #(.*) 0x'

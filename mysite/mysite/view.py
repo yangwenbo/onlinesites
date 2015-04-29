@@ -4,9 +4,26 @@ from django.views.decorators.csrf import csrf_protect
 import datetime,hashlib,os,subprocess
 from myapp.models import sample
 from django.core.servers.basehttp import FileWrapper
-import thread
+import threading
+'''
+class dynThread(threading.Thread):
+	
+	def __init__(self, p,upfile,dynamic_loc):
+		threading.Thread.__init__(self)
+		self.p = p
+		self.upfile = upfile
+		self.dynamic_loc = dynamic_loc
+
+	def run(self):
+		print "aaa"
+		run_dynamic_analysis(self.p,self.upfile,self.dynamic_loc)
+'''
+
 
 cur_dir = os.path.split(os.path.realpath(__file__))[0]
+print cur_dir
+path = os.getcwd()
+up_loc = path+"/files/%s/upload/"
 
 
 def hello(request):
@@ -38,7 +55,7 @@ def uploadapk(request):
 def handle_uploaded_file(f,h,flag='n'):
 	#cal hash, create app folder, upload folder, write database
 
-	upload_loc = "files/"+h+"/upload/"
+	upload_loc = up_loc % h
 	if not os.path.exists(upload_loc):
 		os.makedirs(upload_loc)
 	fn = upload_loc + f.name
@@ -53,35 +70,22 @@ def handle_uploaded_file(f,h,flag='n'):
 		if os.path.isfile(fn):
 			s = sample(md5hash = h,
 				upload_location = fn,
-				upload_time = datetime.datetime.now())
+				upload_time = datetime.datetime.now(),
+				static_status = 0,
+				dynamic_status = 0)
 			s.save()
 	else:
 		if os.path.isfile(fn):
 			p.upload_location=fn
 			p.upload_time=datetime.datetime.now()
 			s.save()
+	'''
 	if flag == 's':
 		static_analysis(h)
 	if flag == 'd':
+		#subprocess.Popen(["sleep","100"])
 		dynamic_analysis(h)
-
-
-
-def static_analysis(apkhash):
-	static_loc = "files/"+apkhash+"/static/"
-	if not os.path.exists(static_loc):
-		os.makedirs(static_loc)
-	fn = static_loc + apkhash+".txt"
-	p = sample.objects.get(md5hash = apkhash)
-	upfile = p.upload_location
-	#need to check upload file is fine!!!!!!!!!!!!
-	if upfile and os.path.isfile(upfile):
-		child = subprocess.call(['python',os.path.dirname(__file__)+'/apkanalysis/static.py',upfile,fn])
-		child.wait()
-		if os.path.isfile(fn):
-			p.static_location = fn
-			p.static_time = datetime.datetime.now()
-			p.save()
+	'''
 
 
 def static_res(request,offset):
@@ -98,8 +102,9 @@ def static_res(request,offset):
 				lines = f.readlines()
 			return render_to_response("static_res.html",{'lines':lines})
 		else:
-			static_analysis(offset)
-			return render_to_response('static.html',{'analyzing':True})
+			return render_to_response('static.html',{'error':'nofile'})
+			#static_analysis(offset)
+			#return render_to_response('static.html',{'analyzing':True})
 
 
 
@@ -132,6 +137,7 @@ def uploadhash_d(request):
 	else:
 		return render_to_response('dynamic.html',{'error':'nohash'})
 
+
 def uploadapk_d(request):
 	if 'file' in request.FILES:
 		f = request.FILES['file']
@@ -140,6 +146,7 @@ def uploadapk_d(request):
 			p = sample.objects.get(md5hash = apkhash)
 		except sample.DoesNotExist:
 			handle_uploaded_file(f,apkhash,'d')
+			
 			#dynamic_analysis(apkhash)
 			return render_to_response('dynamic.html',{'success':True})
 		except sample.MultipleObjectsReturned:
@@ -166,51 +173,9 @@ def dynamic_res(request,offset):
 			else:
 				return render_to_response('dynamic.html',{'error':'internalerror'})
 		else:
-			dynamic_analysis(offset)
-			return render_to_response('dynamic.html',{'analyzing':True})
-
-
-def dynamic_analysis(apkhash):
-	dynamic_loc = "files/"+apkhash+"/dynamic/"
-	if not os.path.exists(dynamic_loc):
-		os.makedirs(dynamic_loc)
-	#fn = dynamic_loc + apkhash+".txt"
-	p = sample.objects.get(md5hash = apkhash)
-	upfile = p.upload_location
-	#need to check upload file is fine!!!!!!!!!!!!
-	if upfile and os.path.isfile(upfile):
-		try:
-			thread.start_new_thread(run_dynamic_analysis,(p,upfile,dynamic_loc,))
-		except:
-			return render_to_response('dynamic.html',{'error':'internalerror'})
-		else:
-			return render_to_response('dynamic.html',{'success':True})
-		'''
-		subprocess.call(["python",cur_dir+"/apkanalysis/conf/all.py",upfile,dynamic_loc])
-		dy_fn = dynamic_loc + "parseRes/behavior"
-		dl_fn = dynamic_loc + "download.zip"
-		if os.path.isfile(dy_fn):
-			p.dynamic_location = dy_fn
-			p.dynamic_time = datetime.datetime.now()
-			p.save()
-		if os.path.isfile(dl_fn):
-			p.download_location = dl_fn
-			p.save()
-		'''
-
-def run_dynamic_analysis(p,upfile,dynamic_loc):
-	child = subprocess.call(["python",cur_dir+"/apkanalysis/conf/all.py",upfile,dynamic_loc])
-	child.wait()
-	dy_fn = dynamic_loc + "parseRes/behavior"
-	dl_fn = dynamic_loc + "download.zip"
-	if os.path.isfile(dy_fn):
-		p.dynamic_location = dy_fn
-		p.dynamic_time = datetime.datetime.now()
-		p.save()
-	if os.path.isfile(dl_fn):
-		p.download_location = dl_fn
-		p.save()
-
+			return render_to_response('dynamic.html',{'error':'nofile'})
+			#dynamic_analysis(offset)
+			#return render_to_response('dynamic.html',{'analyzing':True})
 
 def download_res(request,offset):
 	try:
@@ -230,5 +195,89 @@ def download_res(request,offset):
 			else:
 				return render_to_response('dynamic.html',{'error':'internalerror'})
 		else:
-			dynamic_analysis(offset)
-			return render_to_response('dynamic.html',{'analyzing':True})
+			return render_to_response('dynamic.html',{'error':'nofile'})
+			#dynamic_analysis(offset)
+			#return render_to_response('dynamic.html',{'analyzing':True})
+
+
+
+
+
+
+
+def dynamic_analysis(apkhash):
+	dynamic_loc = "files/"+apkhash+"/dynamic/"
+	if not os.path.exists(dynamic_loc):
+		os.makedirs(dynamic_loc)
+	#fn = dynamic_loc + apkhash+".txt"
+	p = sample.objects.get(md5hash = apkhash)
+	upfile = p.upload_location
+	#need to check upload file is fine!!!!!!!!!!!!
+	if upfile and os.path.isfile(upfile):
+		try:
+			#thread.start_new_thread(run_dynamic_analysis,(p,upfile,dynamic_loc,))
+			print "eee"
+			print p
+			print upfile
+			print dynamic_loc
+			'''
+			dt = dynThread(p,upfile,dynamic_loc)
+			dt.setDaemon(True)
+			print "yyyyyyyyy"
+			dt.start()
+			print "xxxx"
+			'''
+			test()
+			
+			a = render_to_response('dynamic.html',{'success':True})
+			print "aaaaaaaaaa"
+			return a
+			
+		except:
+			return render_to_response('dynamic.html',{'error':'internalerror'})
+			
+		'''
+		subprocess.call(["python",cur_dir+"/apkanalysis/conf/all.py",upfile,dynamic_loc])
+		dy_fn = dynamic_loc + "parseRes/behavior"
+		dl_fn = dynamic_loc + "download.zip"
+		if os.path.isfile(dy_fn):
+			p.dynamic_location = dy_fn
+			p.dynamic_time = datetime.datetime.now()
+			p.save()
+		if os.path.isfile(dl_fn):
+			p.download_location = dl_fn
+			p.save()
+		'''
+
+def run_dynamic_analysis(p,upfile,dynamic_loc):
+	subprocess.call(["python",cur_dir+"/apkanalysis/conf/all.py",upfile,dynamic_loc])
+	print "#################################################################################################################"
+	dy_fn = dynamic_loc + "parseRes/behavior"
+	dl_fn = dynamic_loc + "download.zip"
+	if os.path.isfile(dy_fn):
+		p.dynamic_location = dy_fn
+		p.dynamic_time = datetime.datetime.now()
+		p.save()
+	if os.path.isfile(dl_fn):
+		p.download_location = dl_fn
+		p.save()
+
+
+
+
+
+def static_analysis(apkhash):
+	static_loc = "files/"+apkhash+"/static/"
+	if not os.path.exists(static_loc):
+		os.makedirs(static_loc)
+	fn = static_loc + apkhash+".txt"
+	p = sample.objects.get(md5hash = apkhash)
+	upfile = p.upload_location
+	#need to check upload file is fine!!!!!!!!!!!!
+	if upfile and os.path.isfile(upfile):
+		subprocess.call(['python',os.path.dirname(__file__)+'/apkanalysis/static.py',upfile,fn])
+		
+		if os.path.isfile(fn):
+			p.static_location = fn
+			p.static_time = datetime.datetime.now()
+			p.save()
