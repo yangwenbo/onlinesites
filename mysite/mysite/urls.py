@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
-from mysite.view import hello,static,uploadapk,result,dynamic,static_res,uploadhash,uploadapk_d,uploadhash_d,dynamic_res,download_res
+from mysite.view import hello,static,uploadapk,result,dynamic,static_res,uploadhash,uploadapk_d,uploadhash_d,dynamic_res,download_res,manual_res
 
 
 urlpatterns = patterns('',
@@ -19,5 +19,6 @@ urlpatterns = patterns('',
     url('^uploadhash_d$', uploadhash_d),
     url('^uploadapk_d$', uploadapk_d),
     url('^dynamic_res/(.*)', dynamic_res),
+    url('^manual_res/(.*)', manual_res),
     url('^download_res/(.*)', download_res),
 )

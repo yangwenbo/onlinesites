@@ -12,6 +12,9 @@ class sample(models.Model):
 	dynamic_time = models.DateTimeField(null= True)
 	static_status = models.IntegerField(null= True)
 	dynamic_status = models.IntegerField(null= True)
+	manual_status = models.IntegerField(null= True)
+	manual_location = models.TextField(null= True)
+	manual_time = models.DateTimeField(null= True)
 
 	def __unicode__(self):
 		return self.md5hash

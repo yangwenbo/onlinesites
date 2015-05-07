@@ -72,7 +72,8 @@ def handle_uploaded_file(f,h,flag='n'):
 				upload_location = fn,
 				upload_time = datetime.datetime.now(),
 				static_status = 0,
-				dynamic_status = 0)
+				dynamic_status = 0,
+				manual_status = 0)
 			s.save()
 	else:
 		if os.path.isfile(fn):
@@ -177,6 +178,28 @@ def dynamic_res(request,offset):
 			#dynamic_analysis(offset)
 			#return render_to_response('dynamic.html',{'analyzing':True})
 
+def manual_res(request,offset):
+	try:
+		p = sample.objects.get(md5hash = offset)
+	except sample.DoesNotExist:
+		return render_to_response('dynamic.html',{'error':'nofile'})
+	except sample.MultipleObjectsReturned:
+		return render_to_response('dynamic.html',{'error':'internalerror'})
+	else:
+		ma_fn = p.manual_location
+		if ma_fn:
+			if os.path.isfile(ma_fn):
+				wrapper = FileWrapper(file(ma_fn))
+				response = HttpResponse(wrapper, content_type='application/zip')
+				response['Content-Length'] = os.path.getsize(ma_fn)
+				response['Content-Disposition'] = "attachment;filename=%s" % (offset+"_manual.tar.gz")
+				return response
+			else:
+				return render_to_response('dynamic.html',{'error':'internalerror'})
+		else:
+			return render_to_response('dynamic.html',{'error':'nofile'})
+
+
 def download_res(request,offset):
 	try:
 		p = sample.objects.get(md5hash = offset)
@@ -189,8 +212,9 @@ def download_res(request,offset):
 		if dl_fn:
 			if os.path.isfile(dl_fn):
 				wrapper = FileWrapper(file(dl_fn))
-				response = HttpResponse(wrapper, content_type='text/plain')
+				response = HttpResponse(wrapper, content_type='application/zip')
 				response['Content-Length'] = os.path.getsize(dl_fn)
+				response['Content-Disposition'] = "attachment;filename=%s" % (offset+"_dynamic.tar.gz")
 				return response
 			else:
 				return render_to_response('dynamic.html',{'error':'internalerror'})

@@ -39,6 +39,11 @@
     	{% else %}
     	<td>download</td>
     	{% endif %}
+        {% if item.manual_location %}
+        <td><a href=manual_res/{{item.md5hash}}>manual</a></td>
+        {% else %}
+        <td>manual</td>
+        {% endif %}
     </tr>
     {% endfor %}
   

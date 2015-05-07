@@ -62,7 +62,7 @@ class dyn_Thread (threading.Thread):
 			subprocess.call(['python',path+'/mysite/apkanalysis/conf/allstart.py',self.uploc,dynamic_loc,self.sn])
 			indroid_device[self.sn][0] = 0
 			dy_fn = dynamic_loc + "parseRes/behavior"
-			dl_fn = dynamic_loc + "download.zip"
+			dl_fn = dynamic_loc + "download.tar.gz"
 			if os.path.isfile(dy_fn) and os.path.isfile(dl_fn):
 				try:
 					dok = dynamic_ok % (dy_fn, dl_fn, int(self.dy_id))
