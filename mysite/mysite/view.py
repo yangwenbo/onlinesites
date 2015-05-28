@@ -33,26 +33,55 @@ def hello(request):
 def static(request):
 	return render_to_response('static.html')
 
+def update_status(req):
+	st = 0
+	dy = 0
+	ma = 0
+	if 'st' not in req:
+		st = 5
+	if 'dy' not in req:
+		dy = 5
+	if 'ma' not in req:
+		ma = 5
+	return (st,dy,ma)
+
+
 
 def uploadapk(request):
+	#print request.POST.getlist('ana') 
+	
 	if 'file' in request.FILES:
 		f = request.FILES['file']
 		apkhash = hashlib.md5(f.read()).hexdigest()
+		req = request.POST.getlist('ana')
 		try:
 			p = sample.objects.get(md5hash = apkhash)
 		except sample.DoesNotExist:
-			handle_uploaded_file(f,apkhash,'s')
+			
+			st,dy,ma = update_status(req)
+			handle_uploaded_file(f,apkhash,st,dy,ma)
 			#static_analysis(apkhash)
 			return render_to_response('static.html',{'success':True})
 		except sample.MultipleObjectsReturned:
 			return render_to_response('static.html',{'error':'internalerror'})
 		else:
+			st,dy,ma = update_status(req)
+			if p.static_status == 5:
+				p.static_status = st
+				p.save()
+			if p.dynamic_status == 5:
+				p.dynamic_status = dy
+				p.save()
+			if p.manual_status == 5:
+				p.manual_status = ma
+				p.save()
 			return static_res(request,apkhash)
 	else:
 		return render_to_response('static.html',{'error':'nofile'})
+	
 
 
-def handle_uploaded_file(f,h,flag='n'):
+def handle_uploaded_file(f,h,st=0,dy=0,ma=0):
 	#cal hash, create app folder, upload folder, write database
 
 	upload_loc = up_loc % h
@@ -71,9 +100,9 @@ def handle_uploaded_file(f,h,flag='n'):
 			s = sample(md5hash = h,
 				upload_location = fn,
 				upload_time = datetime.datetime.now(),
-				static_status = 0,
-				dynamic_status = 0,
-				manual_status = 0)
+				static_status = st,
+				dynamic_status = dy,
+				manual_status = ma)
 			s.save()
 	else:
 		if os.path.isfile(fn):

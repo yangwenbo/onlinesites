@@ -6,6 +6,7 @@ static_status
 0: not analysis
 1: analysis ok
 2: something wrong
+5: do not need
 '''
 
 

@@ -8,7 +8,7 @@ static_status
 1: analysis ok
 2: doing
 3: something wrong
-
+5: do not need
 indroid device: serial_num:(status,last_time)
 '''
 
@@ -20,6 +20,7 @@ MAX_RUNTIME = 120
 indroid_device = {
 	'0149C25E0A00C005': [0,0],
 	'0090fd6dde218518': [0,0],
+	'01498B090200A009': [0,0],
 }
 '''
 0: free
