@@ -31,4 +31,5 @@ else:
 	subprocess.call(adbPath + "push all_classmethod/"+package+"_class.dlist /data/data/"+package+"/class.dlist", shell=True)
 subprocess.call(adbPath + "push "+cur_dir+"/config/flag.dlist /data/data/"+package+"/", shell=True)
 subprocess.call(adbPath + "push "+cur_dir+"/config/object.dlist /data/data/"+package+"/", shell=True)
+subprocess.call(adbPath + "push "+cur_dir+"/config/unpack.dlist /data/data/"+package+"/", shell=True)
 

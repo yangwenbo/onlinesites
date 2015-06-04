@@ -82,6 +82,7 @@ vm = dx.get_vm()
 cm = vm.get_class_manager()
 
 sClass = set()
+sClass.add(("L"+a.get_main_activity()+";").replace('.','/'))
 sMethod = set()
 
 permissions = []
